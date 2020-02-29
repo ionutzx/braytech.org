@@ -1,0 +1,63 @@
+.group.customise-tip {
+  overflow: hidden;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: minmax(auto, 700px);
+  grid-gap: 2rem;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.group.customise-tip .wrap {
+  position: relative;
+  display: grid;
+  grid-template-columns: max-content min-content;
+  justify-content: space-between;
+  column-gap: 3px;
+  row-gap: 1rem;
+}
+
+.group.customise-tip .icon {
+  position: absolute;
+  right: 8rem;
+  top: -5rem;
+  height: calc(100% + 10rem);
+  opacity: 0.5;
+}
+
+.group.customise-tip .icon svg {
+  width: auto;
+  height: 100%;
+}
+
+.group.customise-tip .text {
+  max-width: 500px;
+  font-size: 16px;
+}
+
+.group.customise-tip .button .text {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 1024px) {
+  .group.customise-tip .icon {
+    right: 4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .group.customise-tip {
+    padding: 2rem;
+  }
+
+  .group.customise-tip .wrap {
+    grid-template-columns: auto;
+  }
+
+  .group.customise-tip .icon {
+    right: -4rem;
+    top: -4rem;
+    height: calc(100% + 8rem);
+    opacity: 0.3;
+  }
+}

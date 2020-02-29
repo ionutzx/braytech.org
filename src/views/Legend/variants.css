@@ -1,0 +1,9 @@
+#legend .page.gambit.variant-0 .background .image {
+  background-position-y: 0;
+  background-size: cover;
+}
+
+#legend .page.gambit.variant-0 .row.name .displayName,
+#legend .page.gambit.variant-0 .row.name .groupName {
+  text-align: left;
+}

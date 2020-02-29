@@ -1,0 +1,28 @@
+.user-module.flashpoint {
+  position: relative;
+}
+
+.user-module.flashpoint .icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 80%;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.user-module.flashpoint .icon svg {
+  height: 100%;
+  width: 100%;
+}
+
+.user-module.flashpoint .text {
+  position: relative;
+}
+
+@media screen and (max-width: 600px) {
+  .user-module.flashpoint .icon {
+    opacity: 0.25;
+  }
+}

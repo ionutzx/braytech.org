@@ -1,0 +1,26 @@
+.scene {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  /* background-image: url('/tiger_release_final_20191210_015420.png');
+  background-size: cover;
+  background-position: center top; */
+}
+
+.scene .render {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.scene .spinner {
+  z-index: 20;
+  pointer-events: none;
+}

@@ -1,0 +1,22 @@
+.report-player-button,
+.report-player-button .button {
+  width: 38px;
+  height: 38px;
+}
+
+.report-player-button .button {
+  justify-content: center;
+}
+
+.report-player-button .button .text {
+  padding: 0;
+}
+
+
+@media screen and (max-width: 600px) {
+
+  
+
+}
+
+

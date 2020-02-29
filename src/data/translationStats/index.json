@@ -1,0 +1,86 @@
+{
+  "de": {
+    "translated": 382,
+    "notTranslated": 270,
+    "added": [],
+    "removed": []
+  },
+  "debug": {
+    "translated": 652,
+    "notTranslated": 0,
+    "added": [],
+    "removed": []
+  },
+  "en": {
+    "translated": 652,
+    "notTranslated": 0,
+    "added": [],
+    "removed": []
+  },
+  "es-mx": {
+    "translated": 652,
+    "notTranslated": 0,
+    "added": [],
+    "removed": []
+  },
+  "es": {
+    "translated": 652,
+    "notTranslated": 0,
+    "added": [],
+    "removed": []
+  },
+  "fr": {
+    "translated": 581,
+    "notTranslated": 71,
+    "added": [],
+    "removed": []
+  },
+  "it": {
+    "translated": 651,
+    "notTranslated": 1,
+    "added": [],
+    "removed": []
+  },
+  "ja": {
+    "translated": 603,
+    "notTranslated": 49,
+    "added": [],
+    "removed": []
+  },
+  "ko": {
+    "translated": 575,
+    "notTranslated": 77,
+    "added": [],
+    "removed": []
+  },
+  "pl": {
+    "translated": 0,
+    "notTranslated": 652,
+    "added": [],
+    "removed": []
+  },
+  "pt-br": {
+    "translated": 593,
+    "notTranslated": 59,
+    "added": [],
+    "removed": []
+  },
+  "ru": {
+    "translated": 644,
+    "notTranslated": 8,
+    "added": [],
+    "removed": []
+  },
+  "zh-chs": {
+    "translated": 474,
+    "notTranslated": 178,
+    "added": [],
+    "removed": []
+  },
+  "zh-cht": {
+    "translated": 389,
+    "notTranslated": 263,
+    "added": [],
+    "removed": []
+  }
+}

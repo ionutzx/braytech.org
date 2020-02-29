@@ -1,0 +1,203 @@
+#archives {
+  padding: 0;
+  margin: -40px auto 0;
+  width: 100%;
+  display: grid;
+}
+
+#archives .module.head {
+  padding: calc(4rem + 40px) 3rem 3rem;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+#archives .module.head .page-header:last-child {
+  margin-bottom: 0;
+}
+
+#archives .buff {
+  width: 100%;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  column-gap: 3rem;
+  row-gap: 3rem;
+}
+
+#archives .module.views .list {
+  position: sticky;
+  top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3px;
+  width: 60px;
+}
+
+#archives .module.views .list li {
+  position: relative;
+  display: grid;
+  margin: 0;
+  height: unset;
+  padding-bottom: 100%;
+}
+
+#archives .module.views .list li .icon {
+  position: absolute;
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+#archives .module.views .list li .icon svg {
+  transform: scale(0.6);
+  fill: white;
+}
+
+#archives .module.views .list li::before {
+  box-shadow: inset 0 0 0 1px rgba(214, 214, 214, 0.4);
+}
+
+#archives .module.views .list li.linked:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 2;
+}
+
+#archives .module.views .list li a.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 0 0 1px rgba(214, 214, 214, 1);
+  color: #fff;
+}
+
+#archives .module.views .list li a:hover {
+  color: #fff;
+}
+
+#archives .content {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 3rem;
+}
+
+#archives .watermark {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  height: 100%;
+  width: 32%;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+#archives .watermark svg {
+  height: auto;
+  width: 100%;
+  fill: #ffffff;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+#archives .module .text { 
+  font-size: 16px;
+  max-width: 600px;
+}
+
+#archives .module .text p:not(:first-child) {
+  font-size: 14px;
+}
+
+#archives .module .text ~ .button {
+  margin: 1rem 0 0;
+}
+
+
+
+
+#archives.index .content {
+  grid-template-columns: 1fr;
+}
+
+#archives.index .highlights .name {
+  font-size: 16px;
+}
+
+#archives.index .highlights .description .text p {
+  font-size: 14px;
+}
+
+#archives.index .highlights .list.table > li > ul > li:last-child {
+  justify-content: unset;
+}
+
+#archives.index .highlights .button {
+  display: grid;
+  justify-content: space-between;
+  grid-auto-flow: column;
+  padding: 0 1rem;
+}
+
+#archives.index .highlights .button .text {
+  padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1280px) {
+  #archives .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #archives .buff {
+    grid-template-columns: 60px 1fr;
+  }
+
+  #archives .watermark {
+    right: -2rem;
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #archives .module.head {
+    padding: calc(3rem + 40px) 2rem 2rem;
+  }
+
+  #archives .buff {
+    padding: 2rem;
+    grid-template-columns: 40px 1fr;
+    gap: 2rem;
+  }
+
+  #archives .module.views .list {
+    top: 2rem;
+    grid-template-columns: 1fr;
+    width: 40px;
+  }
+
+  #archives .module .text {
+    font-size: 14px;
+  }
+
+  #archives .content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  #archives .watermark {
+    right: -1rem;
+    width: calc(100% + 2rem);
+  }
+}

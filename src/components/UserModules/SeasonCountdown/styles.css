@@ -1,0 +1,47 @@
+.user-module.season-countdown .time {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
+
+.user-module.season-countdown .time .text {
+  padding: 12px 0 16px;
+}
+
+.user-module.season-countdown .time .line {
+  position: relative;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.user-module.season-countdown .time .line::before,
+.user-module.season-countdown .time .line::after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 1rem;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.user-module.season-countdown .time .line::after {
+  left: unset;
+  right: 0;
+}
+
+.user-module.season-countdown .time .line:last-child::before,
+.user-module.season-countdown .time .line:last-child::after {
+  top: unset;
+  bottom: 1px;
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .user-module.season-countdown .time {
+    font-size: 20px;
+  }
+
+}

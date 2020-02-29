@@ -1,0 +1,43 @@
+.user-module.character-equipment .list.inventory-items {
+  grid-template-columns: repeat(auto-fill, 64px);
+  position: relative;
+  z-index: 2;
+}
+
+.user-module.character-equipment .stats {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.user-module.character-equipment .stats .stat {
+  display: grid;
+  grid-template-columns: max-content auto;
+  column-gap: 6px;
+  align-items: center;
+  justify-items: start;
+}
+
+.user-module.character-equipment .stats .stat .value {
+  font-size: 16px;
+}
+
+.user-module.character-equipment .stats .stat [class^="destiny-"] {
+  font-size: 16px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1279px) {
+  .user-module.character-equipment .list.inventory-items {
+    grid-template-columns: repeat(auto-fill, 48px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .user-module.character-equipment .list.inventory-items {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}

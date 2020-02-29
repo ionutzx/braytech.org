@@ -1,0 +1,94 @@
+.user-module.clan .info {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.user-module.clan .about {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 0 0 20px;
+}
+
+.user-module.clan .about .now {
+  grid-row: 1/3;
+}
+
+.user-module.clan .about .now .value {
+  font-size: 72px;
+  line-height: 56px;
+  margin: 0 0 1rem;
+}
+
+.user-module.clan .about .now .name {
+  line-height: 1.4;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.user-module.clan .about .text {
+  grid-column: span 2;
+}
+
+.user-module.clan .about .text .name {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.user-module.clan .about .text .motto {
+  margin: 4px 0 0;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+
+
+.user-module.clan ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+  row-gap: 4px;
+}
+
+.user-module.clan ul li {
+  height: unset;
+  margin: 0;
+}
+
+.user-module.clan ul li ul {
+  display: grid;
+  grid-template-columns: unset;
+  grid-auto-flow: row;
+  justify-content: space-between;
+}
+
+.user-module.clan ul li ul li {
+  height: unset;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+.user-module.clan ul li ul li:first-child {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.user-module.clan ul li ul li:last-child {
+  font-size: 18px;
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+
+  .user-module.clan .about .now .value {
+    font-size: 56px;
+    line-height: 42px;
+  }
+
+  .user-module.clan .about .text .name {
+    font-size: 20px;
+  }
+
+}

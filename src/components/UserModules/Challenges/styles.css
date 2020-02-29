@@ -1,0 +1,96 @@
+.user-module.challenges > ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+  row-gap: 2rem;
+}
+
+.user-module.challenges > ul > li {
+  display: grid;
+  column-gap: 2rem;
+  row-gap: 1rem;
+  align-content: start;
+}
+
+.user-module.challenges ul li .activity .text {
+  display: grid;
+  gap: 6px;
+}
+
+.user-module.challenges ul li .activity .text .name {
+  font-size: 16px;
+}
+
+.user-module.challenges ul li .activity .text .description {
+  font-size: 16px;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 400px;
+}
+
+.user-module.challenges ul li .challenge .objective {
+  background-color: rgba(255, 237, 111, 0.1);
+  padding: 12px 1rem 18px;
+  border-top: 2px solid rgba(255, 237, 111, 0.2);
+}
+
+.user-module.challenges ul li .challenge:first-child .objective {
+  border-top: 2px solid rgba(255, 237, 111, 0.4);
+}
+
+.user-module.challenges ul li .challenge .objective .text {
+  margin: 0 0 10px;
+}
+
+.user-module.challenges ul li .challenge .rewards {
+  position: relative;
+  background-color: rgba(82, 47, 101, 0.2);
+  border-top: 2px solid rgba(82, 47, 101, 0.4);
+  padding: 10px 1rem;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.user-module.challenges ul li .challenge .rewards.pinnacle::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(225deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  animation: animation-update-flash 1.7s linear 0s infinite;
+  opacity: 0.2;
+}
+
+#now .user-module.challenges .list.activities li {
+  grid-template-columns: 1fr;
+}
+
+@media screen and (max-width: 1440px) {
+  .user-module.challenges > ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .user-module.challenges > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .user-module.challenges > ul {
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+
+  .user-module.challenges ul li .activity .text .description {
+    font-size: 14px;
+  }
+}

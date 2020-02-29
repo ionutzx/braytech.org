@@ -1,0 +1,25 @@
+.index-search {
+  margin: 0 0 calc(1rem + 24px);
+}
+
+.index-search.has-results .list li:last-child:not(:first-child) {
+  margin: 0 0 1rem;
+}
+
+.index-search .list.record-items {
+  grid-template-columns: 1fr;
+}
+
+.index-search .list.collection-items {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 1400px) {
+  .index-search .list.collection-items {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+

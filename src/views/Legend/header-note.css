@@ -1,0 +1,24 @@
+#legend .page .row.header-note {
+  grid-auto-flow: unset;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#legend .page .row.header-note .col {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: var(--fontText);
+  text-transform: uppercase;
+  color: var(--text-margins);
+}
+
+#legend .page .row.header-note .col:nth-child(2) {
+  text-align: center;
+}
+
+#legend .page .row.header-note .col:last-child {
+  text-align: right;
+}
+
+#legend .page .row.header-note .col:last-child::before {
+  content: '// ';
+}

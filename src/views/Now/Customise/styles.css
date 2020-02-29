@@ -1,0 +1,124 @@
+#now.customise .groups {
+  
+}
+
+#now.customise .group.user {
+  padding: 3rem;
+  margin: 0;
+  align-items: start;
+  row-gap: 2rem;
+}
+
+#now.customise .group.user:not(.head):not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#now.customise .group.user.full {
+  grid-template-columns: 1fr;
+}
+
+#now.customise .group.user .column.double {
+  grid-column: span 2;
+}
+
+#now.customise .group.user .column {
+  row-gap: unset;
+}
+
+#now.customise .group.user .column .col-id {
+  margin: 0 0 1rem;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+#now.customise .group.user .column .column-inner {
+  margin: 0 0 1rem;
+  min-height: 5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  display: grid;
+  row-gap: 3px;
+}
+
+#now.customise .group.user .module {
+  display: grid;
+  gap: 1rem;
+  max-width: unset;
+  height: unset;
+  min-height: 38px;
+  padding: 1rem;
+  user-select: none;
+}
+
+#now.customise .group.user .module:last-child {
+  margin: 0;
+}
+
+#now.customise .group.user .module .text {
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto min-content;
+  row-gap: 6px;
+}
+
+#now.customise .group.user .module .text .description {
+  grid-row: 2/3;
+  grid-column: 1/3;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#now.customise .group.user .module.disabled .text .description {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+#now.customise .group.user .module .modules-settings .setting .name {
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
+#now.customise .group.user .module .modules-settings .setting:first-child:last-child .name {
+  display: none;
+}
+
+#now.customise .module .button.remove {
+  position: relative;
+  z-index: 5;
+  width: 38px;
+  justify-content: center;
+}
+
+#now.customise .button.remove:hover {
+  background-color: rgb(220, 81, 59);
+}
+
+#now.customise .modules-selector {
+  position: relative;
+}
+
+#now.customise .modules-selector .list {
+  margin: 3px 0 0;
+  display: grid;
+  row-gap: 3px;
+}
+
+
+@media screen and (max-width: 1440px) {
+  
+}
+
+@media screen and (max-width: 1024px) {
+  
+}
+
+@media screen and (max-width: 600px) {
+  #now.customise .group.user {
+    row-gap: 1.5rem;
+    padding: 2rem;
+    margin: 0;
+  }
+
+  #now.customise .group.user .column.double {
+    grid-column: unset;
+  }
+}

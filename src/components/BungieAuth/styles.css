@@ -1,0 +1,219 @@
+.bungie-auth .text ~ .button {
+  margin: 1rem 0 0;
+}
+
+.bungie-auth .member {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.bungie-auth .member .details {
+  position: absolute;  
+  bottom: 2rem;
+  left: 1rem;
+  display: grid;
+  grid-template-columns: 48px auto;
+  grid-gap: 1rem;
+}
+
+.bungie-auth .member .details .icon {
+  position: relative;
+  height: unset;
+  padding-bottom: 100%;
+}
+
+.bungie-auth .member .details .icon.shadow {
+  box-shadow: 0 15px 25px 10px rgba(0,0,0,0.4);
+}
+
+.bungie-auth .member .details .text {
+  position: relative;
+  display: grid;
+  align-content: center;
+}
+
+.bungie-auth .member .image.background {
+  position: relative;
+  height: unset;
+  padding-bottom: 39%;
+  background-size: cover;
+}
+
+.bungie-auth .member .image.background.dl {
+  opacity: 0.8;
+}
+
+.bungie-auth .member .displayName {
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}
+
+.bungie-auth .member .firstAccess {
+  font-size: 12px;
+  margin: 1px 0 1px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.bungie-auth .member ~ .button {
+  margin: 1rem 0 0;
+}
+
+.bungie-auth .memberships {
+  margin: 1rem 0 0;
+  max-width: 300px;
+}
+
+.bungie-auth .memberships .list li {
+  padding: 0 1rem 0 0;
+  cursor: pointer;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 56px 1fr 24px;
+  user-select: none;
+}
+
+.bungie-auth .memberships .list li.linked:hover {
+  z-index: 3;
+}
+
+.bungie-auth .memberships .list li.linked .icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem 0 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.bungie-auth .memberships .list li.linked .icon.destiny-platform_xbox {
+  background-color: #4CAF50;
+}
+
+.bungie-auth .memberships .list li.linked .icon.destiny-platform_playstation {
+  background-color: #3F51B5;
+}
+
+.bungie-auth .memberships .list li.linked .icon.destiny-platform_steam {
+  background-color: #165b83;
+}
+
+.bungie-auth .memberships .list li.linked .icon.destiny-platform_battlenet {
+  background-color: #009ae4;
+}
+
+.bungie-auth .memberships .list li.linked .icon.destiny-platform_stadia {
+  background-color: #da2b48;
+}
+
+.bungie-auth .memberships .list li.linked .displayName {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+}
+
+.bungie-auth .memberships .list li.linked .cross-save {
+  width: 24px;
+  height: 24px;
+  opacity: 0.4;
+}
+
+.bungie-auth .memberships .list li.linked .cross-save svg {
+  width: auto;
+  height: 100%;
+  fill: white;
+}
+
+
+
+
+.bungie-auth .patreon .actions,
+.bungie-auth .patreon .actions div {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 3px;
+  justify-content: space-between;
+}
+
+.bungie-auth .patreon form {
+  margin: 2rem 0 0;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+  .bungie-auth .member .details {
+    bottom: 1rem;
+  }
+
+  .bungie-auth .memberships {
+    max-width: unset;
+  }
+}
+
+
+
+
+
+
+.bungie-auth.no-auth {
+  padding: 4rem 3rem 3rem;
+  display: grid;
+  grid-template-columns: minmax(auto, 800px);
+  justify-content: center;
+}
+
+.bungie-auth.no-auth.inline {
+  padding: 0;
+}
+
+.bungie-auth.no-auth .properties {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bungie-auth.no-auth .properties .name {
+  font-size: 38px;
+  font-weight: 600;
+  margin: 0 0 7px;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 7px;
+  margin-bottom: 1rem;
+}
+
+.bungie-auth.no-auth .properties .description {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+}
+
+.bungie-auth.no-auth .properties .description ~ .button,
+.bungie-auth.no-auth .properties .description ~ .spinner {
+  margin: 1rem 0 0;
+}
+
+@media screen and (max-width: 600px) {
+
+  .bungie-auth.no-auth {
+    padding: 3rem 2rem 2rem;
+  }
+
+  .bungie-auth.no-auth.inline {
+    padding: 0;
+  }
+
+  .bungie-auth.no-auth .properties .name {
+    font-size: 24px;
+  }
+  
+  .bungie-auth.no-auth .properties .description {
+    font-size: 14px;
+  }  
+
+}

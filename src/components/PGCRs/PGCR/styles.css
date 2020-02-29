@@ -1,0 +1,866 @@
+.list.reports li.linked:hover,
+.list.reports li.tooltip:hover {
+  z-index: unset;
+}
+
+.list.reports li > .basic {
+  display: grid;
+  width: 100%;
+  height: 38px;
+  position: relative;
+  padding: 0 1rem;
+  grid-template-columns: minmax(max-content, 240px) max-content auto;
+  column-gap: 10px;
+  user-select: none;
+  align-items: center;
+  font-size: 14px;
+}
+
+.list.reports li.standing > .basic::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 4px;
+  background-color: rgba(255, 0, 0, 0.6);
+}
+
+.list.reports li.standing.victory .basic::before {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.list.reports li > .basic .mode {
+  font-size: 16px;
+  min-width: 13rem;
+}
+
+.list.reports li > .basic .map {
+  min-width: 10rem;
+}
+
+.list.reports li > .basic .ago {
+  text-align: right;
+}
+
+.list.reports > li:not(.isExpanded) {
+  cursor: pointer;
+}
+
+.list.reports li.isExpanded {
+  height: unset;
+  display: block;
+  background-color: hsla(0, 0%, 100%, 0.05);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.list.reports li.isExpanded:hover {
+  background-color: hsla(0, 0%, 100%, 0.05);
+}
+
+.list.reports li.isExpanded:hover::before,
+.list.reports li.isExpanded:hover::after {
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.list.reports li > .head {
+  position: relative;
+  width: 100%;
+  padding-bottom: 40%;
+  user-select: none;
+}
+
+.list.reports li > .head .image.bg {
+  background-size: cover;
+  filter: brightness(0.9);
+}
+
+.list.reports li > .head.crucible .image.bg,
+.list.reports li > .head.gambit .image.bg {
+  filter: brightness(0.7);
+}
+
+.list.reports li > .head .detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.list.reports li > .head .detail > div:last-child {
+  text-align: right;
+}
+
+.list.reports li > .head .detail .map,
+.list.reports li > .head .detail .ago {
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.list.reports li > .head .standing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: end;
+  justify-items: center;
+}
+
+.list.reports li > .head .standing .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  height: 30%;
+  margin: -15% 0 0 -15%;
+}
+
+.list.reports li > .head .standing .icon svg {
+  pointer-events: none;
+}
+
+.list.reports li > .head .standing .icon .victory .square {
+  transform-origin: center center;
+  animation: rotate-linear 32s infinite linear;
+}
+
+.list.reports li > .head .standing .icon .victory .square2 {
+  animation: rotate-linear 16s infinite linear;
+}
+
+.list.reports li > .head .standing .icon .victory .chevron {
+  transform-origin: center center;
+  animation: standing-crucible-chevron-scale-small 4s infinite 0s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+.list.reports li > .head .standing .icon .victory .chevron.chevron1 {
+  animation: standing-crucible-chevron-scale-small 4s infinite 0.1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+.list.reports li > .head .standing .icon .victory .chevron.chevron2 {
+  animation: standing-crucible-chevron-scale 4s infinite 0.2s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+.list.reports li > .head .standing .icon .victory .chevron.chevron3 {
+  animation: standing-crucible-chevron-scale 4s infinite 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+.list.reports li > .head .standing .icon .victory .chevron.chevron4 {
+  animation: standing-crucible-chevron-scale 4s infinite 0.6s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+@keyframes standing-crucible-chevron-scale-small {
+  0%, 20%, 100% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes standing-crucible-chevron-scale {
+  0%, 20%, 100% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.075);
+  }
+}
+
+.list.reports li > .head .standing .icon .defeat .knives {
+  transform-origin: center center;
+  animation: rotate-linear 40s infinite linear;
+}
+
+.list.reports li > .head .standing .icon .defeat .knife {
+  transform-origin: center center;
+  transform: translate3d(-10px, -10px, 0);
+  animation: standing-crucible-knife-bob-1 4s infinite cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.list.reports li > .head .standing .icon .defeat .knife.knife2 {
+  transform: translate3d(10px, -10px, 0);
+  animation: standing-crucible-knife-bob-2 4s infinite .5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.list.reports li > .head .standing .icon .defeat .knife.knife3 {
+  transform: translate3d(10px, 10px, 0);
+  animation: standing-crucible-knife-bob-3 4s infinite 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.list.reports li > .head .standing .icon .defeat .knife.knife4 {
+  transform: translate3d(-10px, 10px, 0);
+  animation: standing-crucible-knife-bob-4 4s infinite 1.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+@keyframes standing-crucible-knife-bob-1 {
+  0%, 60%, 100% {
+    transform: translate3d(-10px, -10px, 0);
+  }
+  30% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes standing-crucible-knife-bob-2 {
+  0%, 60%, 100% {
+    transform: translate3d(10px, -10px, 0);
+  }
+  30% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes standing-crucible-knife-bob-3 {
+  0%, 60%, 100% {
+    transform: translate3d(10px, 10px, 0);
+  }
+  30% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes standing-crucible-knife-bob-4 {
+  0%, 60%, 100% {
+    transform: translate3d(-10px, 10px, 0);
+  }
+  30% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.list.reports li > .head .standing .icon .victory-gambit .radial {
+  transform-origin: center center;
+  animation: rotate-linear 32s infinite linear;
+  opacity: 0.4;
+}
+
+.list.reports li > .head .standing .icon .victory-gambit .radial-1,
+.list.reports li > .head .standing .icon .victory-gambit .radial-2,
+.list.reports li > .head .standing .icon .victory-gambit .radial-background {
+  opacity: 0;
+  transform-origin: center center;
+}
+
+.list.reports li > .head .standing .icon .victory-gambit .radial-1 {
+  animation: standing-victory-gambit-radial-scale 1s 1 0s cubic-bezier(0.46, 0.03, 0.52, 0.96) forwards;
+}
+
+.list.reports li > .head .standing .icon .victory-gambit .radial-2 {
+  animation: standing-victory-gambit-radial-scale 1s 1 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96) forwards;
+}
+
+.list.reports li > .head .standing .icon .victory-gambit .radial-background {
+  animation: standing-victory-gambit-radial-background-scale 3s 1 0s cubic-bezier(0.46, 0.03, 0.52, 0.96) forwards;
+}
+
+@keyframes standing-victory-gambit-radial-scale {
+  0% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes standing-victory-gambit-radial-background-scale {
+  0% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.list.reports li > .head .standing .text {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  margin: 70px 0 0 0;
+  text-align: center;
+  font-size: 1vw;
+  font-weight: 500;
+  letter-spacing: 0.2vw;
+  text-transform: uppercase;
+  display: none;
+}
+
+.list.reports li > .head .score {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-content: center;
+  grid-gap: 3px;
+  font-size: 2.4vw;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.list.reports li > .head .score.teams {
+  top: 80%;
+  height: unset;
+  grid-template-columns: auto auto;
+}
+
+.list.reports li > .head .score.teams .value {
+  position: relative;
+  font-size: 1.4vw;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  width: 5vw;
+  padding: 8px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.list.reports li > .head .score.teams .value:first-child {
+  justify-self: right;
+}
+
+.list.reports li > .head .score.teams .value.bravo.victory {
+  background-color: #60779a;
+}
+
+.list.reports li > .head .score.teams .value.alpha.victory {
+  background-color: #973835;
+}
+
+.list.reports li .entries {
+  padding: 1rem;
+}
+
+.list.reports li .entries ul.team {
+  margin: 0 0 1rem;
+}
+
+.list.reports li .entries ul.team:last-child {
+  margin: 0;
+}
+
+.list.reports li .entries .list li {
+  display: grid;
+}
+
+.list.reports li .entries .list.fireteam {
+  width: 100%;
+  position: relative;
+  padding: 0 0 0 10px;
+}
+
+.list.reports li .entries .list.fireteam.stacked::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: calc(100% - 2px);
+  border: 1px solid #d6d6d6;
+  border-right: none;
+  transition: opacity 0.25;
+  opacity: 0.4;
+}
+
+.list.reports li .entries .list.fireteam.stacked:hover::before {
+  opacity: 0.8;
+}
+
+.wrapper.dark-mode .list.reports li .entries .list.fireteam.stacked::before {
+  opacity: 0.2;
+}
+
+.wrapper.dark-mode .list.reports li .entries .list.fireteam.stacked:hover::before {
+  opacity: 0.4;
+}
+
+.list.reports li .entries .team > li:not(.header) {
+  height: unset;
+}
+
+.list.reports li .entries .header.team,
+.list.reports li .entries li .inline,
+.list.reports li .entries li .detail {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  align-items: center;
+  font-size: 14px;
+}
+
+.list.reports li .entries li .detail {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: max-content;
+  align-items: start;
+}
+
+.list.reports li .entries li .detail.single {
+  grid-template-columns: auto;
+}
+
+.list.reports li .entries .header.team {
+  grid-template-columns: repeat(8, 1fr);
+  padding: 0 0 0 10px;
+  user-select: none;
+}
+
+.list.reports li .entries .list li:last-child {
+  margin: 0;
+}
+
+.list.reports li .entries .header.team {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  line-height: 1.1;
+}
+
+.list.reports li .entries .header.team.bravo {
+  background-color: #60779a;
+}
+
+.list.reports li .entries .header.team.alpha {
+  background-color: #973835;
+}
+
+.list.reports li .entries .header.team::before {
+  content: '';
+  top: -8px;
+  left: -4px;
+  font-family: 'Braytech' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 72px;
+  opacity: 0.2;
+}
+
+.list.reports li .entries .header.team.bravo::before {
+  content: '\e9f5';
+}
+
+.list.reports li .entries .header.team.alpha::before {
+  content: '\e9f4';
+}
+
+.list.reports li .entries .header.team div:not(.team) {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.list.reports li .entries .header .full {
+  
+}
+
+.list.reports li .entries .header .abbr {
+  display: none;
+}
+
+.list.reports li .entries .header.team .team.name {
+  padding: 0 0 0 54px;
+  grid-column: 1/3;
+}
+
+.list.reports li .entries .header.team .team.score {
+  padding: 0 16px 0 0;
+  text-align: right;
+}
+
+.list.reports li .entries .list li > .icon {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  background-color: hsla(0, 0%, 100%, 0.05);
+}
+
+.list.reports li .entries .list li .member {
+  font-size: 16px;
+  width: 100%;
+  position: relative;
+  grid-column: 1/3;
+}
+
+.list.reports li .entries .list .inline.dnf > .member > .member-link .displayName::after {
+  content: 'DNF';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.list.reports li .entries .list .inline .member {
+  padding: 0 16px 0 0;
+}
+
+.list.reports li .entries .list .inline.dnf > .member > .member-link > .emblem .image.dl {
+  opacity: 0;
+}
+
+.list.reports li .entries .list .expanded .inline {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.list.reports li .entries .list .expanded {
+  height: unset;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* .list.reports li .entries .list .expanded:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+} */
+
+.list.reports li .entries .list .expanded:hover::before {
+  background-color: transparent;
+}
+
+.list.reports li .entries .list .expanded > ul > li:last-child {
+  height: unset;
+  display: grid;
+  padding: 2rem 0 0;
+}
+
+.list.reports li .entries .list .detail .group {
+  padding: 0 3rem 2rem 0;
+}
+
+.list.reports li .entries .list .detail .group:first-child,
+.list.reports li .entries .list .detail .group:nth-child(5) {
+  padding-left: calc(38px + 16px);
+}
+
+.list.reports li .entries .list .detail .group:nth-child(5) {
+  grid-column: 1/3;
+}
+
+.list.reports li .entries .list .detail .group > ul {
+  display: grid;
+  row-gap: 10px;
+}
+
+.list.reports li .entries .list .detail .group > ul ~ ul {
+  margin: 2rem 0 0;
+}
+
+.list.reports li .entries .list .detail .group ul li {
+  height: unset;
+  margin: 0;
+}
+
+.list.reports li .entries .list .detail .group ul .divider {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.list.reports li .entries .list .detail .group ul li ul {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
+
+.list.reports li .entries .list .detail .group ul li ul li {
+  height: unset;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+.list.reports li .entries .list .detail .group ul li ul .na {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.list.reports li .entries .list .detail .group .pairs li:first-child {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.list.reports li .entries .list .detail .group ul .header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+
+.list.reports li .entries .list .detail .group ul .header ul li {
+  /* text-transform: uppercase;
+  font-size: 12px; */
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.list.reports li .entries .list .detail.crucible .group.kills {
+  grid-column: span 2;
+}
+
+.list.reports li .entries .list .detail.activity-specific .group.common,
+.list.reports li .entries .list .detail.activity-specific .group.activity {
+  grid-row: 1/3;
+}
+
+.list.reports li .entries .list .detail.activity-specific .group.kills,
+.list.reports li .entries .list .detail.activity-specific .group.medals {
+  grid-column: 3/5;
+}
+
+.list.reports li .entries .list .detail .group.kills ul li ul,
+.list.reports li .entries .list .detail .group.medals ul li ul {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, minmax(30px, 0.8fr));
+  column-gap: 10px;
+}
+
+.list.reports li .entries .list .detail .group.medals ul li ul {
+  grid-template-columns: auto repeat(1, minmax(20px, 30px));
+}
+
+.list.reports li .entries .list .detail .double {
+  display: grid;
+  grid-template-columns: 38px auto;
+  column-gap: 10px;
+}
+
+.list.reports li .entries .list .detail .double div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list.reports li .entries .list .detail .group.kills ul li ul li:nth-child(n+2),
+.list.reports li .entries .list .detail .group.medals ul li ul li:nth-child(n+2) {
+  text-align: right;
+}
+
+.list.reports li .entries .list .detail .group ul li ul li .list.inventory-items {
+  grid-template-columns: auto;
+}
+
+.list.reports li .entries .list .detail .group.medals ul li ul li .list.inventory-items li,
+.list.reports li .entries .list .detail .group.medals ul li ul li .list.inventory-items li .icon {
+  background-color: transparent;
+}
+
+.list.reports li .entries .list .detail .group.medals ul li ul li .list.inventory-items li .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.list.reports li .entries .list .detail .group.medals ul li ul li .list.inventory-items li::before {
+  box-shadow: none;
+}
+
+
+
+
+.list.reports li .entries .list .detail .group.common .report-player {
+  margin: 1rem 0 0;
+}
+
+
+
+.list.reports li > .sticky-nav {
+  position: sticky;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1440px) {
+  .list.reports li .entries .list .detail.activity-specific .group.common,
+  .list.reports li .entries .list .detail.activity-specific .group.activity {
+    grid-column: 1/3;
+  }
+
+  .list.reports li .entries .list .detail.activity-specific .group.activity {
+    grid-row: 2/4;
+    padding-left: calc(38px + 16px);
+  }
+
+  .list.reports li .entries .list .detail.activity-specific .group.kills,
+  .list.reports li .entries .list .detail.activity-specific .group.medals {
+    grid-column: 3/5;
+  }
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .list.reports li .entries .list .detail:not(.single) .group.kills,
+  .list.reports li .entries .list .detail .group.medals {
+    grid-column: 2/5;
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+  .list.reports li > .basic {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .list.reports li > .basic .ago {
+    display: none;
+  }
+
+  .list.reports li > .basic .mode,
+  .list.reports li > .basic .map {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .list.reports li > .basic .mode {
+    min-width: unset;
+  }
+
+  .list.reports li > .basic .map {
+    text-align: right;
+  }
+  
+  .list.reports li > .head {
+    width: 100%;
+    height: 38vh;
+  }
+
+  .list.reports li > .head .detail {
+    padding: 1rem;
+    font-size: 16px;
+  }
+
+  .list.reports li > .head .detail > div:first-child {
+    grid-template-columns: calc(38px + 10px) auto;
+  }
+
+  .list.reports li > .head .detail .map,
+  .list.reports li > .head .detail .ago {
+    font-size: 14px;
+  }
+
+  .list.reports li > .head .detail .icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .list.reports li > .head .standing .text {
+    font-size: 3vh;
+    letter-spacing: 0.25vh;
+    margin: 0 0 1vh;
+  }
+  
+  .list.reports li > .head .score {
+    width: 100%;
+    font-size: 4vh;
+  }
+
+  .list.reports li > .head .score.teams {
+    top: 75%;
+  }
+  
+  .list.reports li > .head .score.teams .value {
+    width: 12vh;
+    font-size: 3vh;
+  }
+
+  .list.reports li > .head .standing .icon {
+    width: 46%;
+    height: 46%;
+    margin: -24% 0 0 -24%;
+  }
+
+  .list.reports li .entries .header.team,
+  .list.reports li .entries .list li .inline {
+    grid-template-columns: minmax(120px, auto) 30px 30px 30px 40px;
+    font-size: 12px;
+  }
+
+  .list.reports li .entries .header.team .team.name,
+  .list.reports li .entries .list li .member {
+    grid-column: unset;
+  }
+
+  .list.reports li .entries .list .inline .behaviour {
+    grid-column: 6/8;
+  }
+  
+  .list.reports li .entries .header.team .hideInline,
+  .list.reports li .entries .header.team .hideInline,
+  .list.reports li .entries .list li .inline .hideInline {
+    display: none;
+  }
+
+  .list.reports li .entries .header.team .killsDeathsRatio,
+  .list.reports li .entries .list li .inline .killsDeathsRatio {
+    text-align: right;
+    padding: 0 1rem 0 0;
+  }
+
+  .list.reports li .entries .header .full {
+    display: none;
+  }
+  
+  .list.reports li .entries .header .abbr {
+    display: unset;
+  }
+
+  .list.reports li .entries .list .expanded > ul > li:last-child {
+    padding: 0;
+  }
+
+  .list.reports li .entries .list .detail {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
+    width: 100%;
+    margin: 0;
+    padding: 2rem 0 2rem calc(38px + 16px);
+    padding: 1rem;
+    row-gap: 1rem;
+  }
+
+  .list.reports li .entries .list .detail .group {
+    grid-row: unset !important;
+    grid-column: unset !important;
+  }
+
+  .list.reports li .entries .list .detail .group {
+    padding: 0 3rem 0 0;
+    padding: 0 !important;
+  }
+  
+  .list.reports li .entries .list .detail .group ul li ul li,
+  .list.reports li .entries .list .detail .group .info {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .list.reports li .entries .list .detail .group.kills ul li ul {
+    grid-template-columns: 2fr repeat(3, 25px);
+  }
+
+  .list.reports li .entries .list .detail .group.medals ul li ul {
+    grid-template-columns: 2fr 40px;
+  }
+
+}

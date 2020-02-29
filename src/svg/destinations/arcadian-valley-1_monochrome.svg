@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 157.70642 257.99442">
+  <title>arcadian-valley-1_monochrome</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Arcadian_Valley" data-name="Arcadian Valley">
+      <g>
+        <g style="opacity: 0.05">
+          <rect y="0.00003" width="157.70638" height="257.99439" rx="6.74984" style="fill: #fff"/>
+        </g>
+        <polygon points="72.833 0 72.833 226.581 0 105.367 0 160.703 58.459 257.994 72.833 257.994 72.833 257.994 101.333 257.994 101.333 0 72.833 0" style="fill: #fff;opacity: 0.30000000000000004"/>
+        <polygon points="101.333 0 101.333 218.678 0 50.031 0 105.367 91.708 257.994 101.333 257.994 101.333 257.994 129.833 257.994 129.833 0 101.333 0" style="fill: #fff;opacity: 0.1"/>
+        <path d="M150.95666,0H129.83288V210.77405L3.64416.7608a6.74459,6.74459,0,0,0-3.644,5.989V50.03149L124.95666,257.99438h26a6.74976,6.74976,0,0,0,6.74976-6.74975V6.74982A6.74978,6.74978,0,0,0,150.95666,0Z" style="fill: #fff;opacity: 0.2"/>
+      </g>
+    </g>
+  </g>
+</svg>

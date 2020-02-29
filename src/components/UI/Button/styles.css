@@ -1,0 +1,136 @@
+.destiny-key {
+  font-family: 'Destiny Symbols' !important;
+}
+
+.destiny-key span {
+  color: #fff;
+}
+
+.wrapper.dark-mode .destiny-key span {
+  color: #333;
+}
+
+.button {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.1);
+  letter-spacing: 0.2px;
+  font-size: 16px;
+  user-select: none;
+  cursor: pointer;
+  transition: opacity 0.25s, color 0.25s, background-color 0.25s, box-shadow 0.25s;
+}
+
+.button::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: inset 0 0 0 1px rgba(214, 214, 214, 0);
+  transition: box-shadow 0.25s, background-color 0.25s;
+}
+
+.button.lined {
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.button.lined::before {
+  box-shadow: inset 0 0 0 1px rgba(214, 214, 214, 0.4);
+}
+
+.button::after {
+  content: ' ';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: 3;
+  pointer-events: none;
+  box-shadow: 0 0 0 2px rgba(214, 214, 214, 0);
+  transform: scale(1.021) translateZ(0);
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 1);
+  z-index: 2;
+}
+
+.button:hover::before {
+  box-shadow: inset 0 0 0 1px #d6d6d6;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.button:hover::after {
+  box-shadow: 0 0 0 2px #d6d6d6;
+  transform: scale(1) translateZ(0);
+}
+
+.button .text {
+  padding: 0 1rem;
+}
+
+.button.disabled,
+.button.disabled:hover {
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.025);
+}
+
+.button.disabled:hover::before {
+  box-shadow: inset 0 0 0 1px transparent;
+  background-color: transparent;
+}
+
+.button.disabled:hover::after {
+  box-shadow: 0 0 0 2px transparent;
+}
+
+.button.cta {
+  justify-content: space-between;
+  grid-auto-flow: column;
+  padding: 0 1rem;
+}
+
+.button.cta .text {
+  padding: 0 2rem 0 0;
+}
+
+.button.cta i {
+  animation: cta-sparkle 1.5s both infinite;
+}
+
+@keyframes cta-sparkle {
+  0% {
+    transform: translateX(-24px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+}

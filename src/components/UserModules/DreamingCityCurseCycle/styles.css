@@ -1,0 +1,27 @@
+.user-module.dreaming-city-curse-cycle {
+  position: relative;
+}
+
+.user-module.dreaming-city-curse-cycle .icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 80%;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+.user-module.dreaming-city-curse-cycle .icon svg {
+  fill: #ffffff;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+
+  .user-module.dreaming-city-curse-cycle .icon {
+    opacity: 0.1;
+  }
+
+}

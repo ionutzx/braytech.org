@@ -1,0 +1,216 @@
+#legend {
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: auto 1280px;
+  gap: 3rem;
+  --text-primary-100: rgb(255, 255, 255);
+  --text-primary-80: rgba(255, 255, 255, 0.8);
+  --text-primary-60: rgba(255, 255, 255, 0.6);
+  --text-primary-40: rgba(255, 255, 255, 0.4);
+  --text-primary-20: rgba(255, 255, 255, 0.2);
+  --text-primary-10: rgba(255, 255, 255, 0.1);
+  --text-primary-5: rgba(255, 255, 255, 0.05);
+  --text-margins: rgba(255, 255, 255, 0.05);
+  --background-primary-1: rgb(152, 152, 152);
+  --corners: rgba(255, 255, 255, 0.1);
+  --triumph-seal-1: #7b3274;
+  --triumph-seal-2: #63215d;
+  --class-titan-1: #4b7f95;
+  --class-hunter-1: #7f624c;
+  --class-warlock-1: #2a7863;
+  --light-1: rgb(228, 208, 98);
+  --light-2: rgba(228, 208, 98, 0);
+}
+
+#legend .config {
+  position: relative;
+}
+
+#legend .config .page-header {
+  margin-bottom: 4rem;
+}
+
+#legend .config .options {
+  position: sticky;
+  top: 3rem;
+}
+
+#legend .config .module-header {
+  position: relative;
+  margin: 48px 0 24px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+}
+
+#legend .config .module-header::after {
+  content: ' ';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  width: 16px;
+  border-bottom: 3px solid #ffffff;
+  opacity: 0.2;
+}
+
+#legend .config .list.settings li {
+  height: unset;
+  display: block;
+  padding: 5px 0;
+  margin: 0 0 7px;
+}
+
+#legend .config .list.settings li:last-child {
+  margin: 0;
+}
+
+#legend .config .list.settings li .check-box {
+  width: 100%;
+}
+
+#legend .config .list.settings li .check-box .text {
+  flex-basis: calc(100% - 24px);
+  justify-content: space-between;
+}
+
+#legend .config input[type='range'] {
+  -webkit-appearance: slider-horizontal;
+  appearance: slider-horizontal;
+  height: unset;
+  width: 100%;
+  max-width: 300px;
+}
+
+#legend .config .info {
+  margin: 10px 0 0;
+  max-width: 300px;
+  font-size: 12px;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+#legend .config .info p {
+  line-height: 1.4;
+}
+
+#legend .config .button {
+  margin: 2rem 0 0;
+}
+
+#legend .config .button:last-child {
+  margin: 1rem 0 0;
+}
+
+#legend .page {
+  position: relative;
+  width: 1280px;
+  padding: 2rem 4rem;
+  overflow: hidden;
+  background-color: var(--background-primary-1);
+  color: var(--text-primary-80);
+}
+
+#legend .page .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#legend .page .background .image {
+  background-repeat: no-repeat;
+  background-position-y: -10%;
+  width: 2560px;
+  height: 200%;
+  transform-origin: left top;
+  transform: scale(0.5);
+}
+
+#legend .page .grid {
+  position: relative;
+  display: grid;
+  align-content: start;
+}
+
+#legend .page .row {
+  display: grid;
+  grid-gap: 2rem;
+  grid-auto-flow: column;
+  margin: 0 0 3rem;
+}
+
+#legend .sub {
+  font-size: 14px;
+  font-family: var(--fontText);
+  /* text-transform: uppercase; */
+  color: var(--text-primary-40);
+}
+
+#legend .page .row .col {
+  
+}
+
+#legend .page .row.name {
+  grid-auto-flow: unset;
+  grid-gap: 0;
+}
+
+#legend .page .row.name .displayName {
+  font-size: 48px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--text-primary-100);
+}
+
+#legend .page .row.name .groupName {
+  font-size: 18px;
+  text-align: center;
+}
+
+#legend .page .corners::before,
+#legend .page .corners::after {
+  border-color: var(--corners);
+}
+
+
+
+@media screen and (max-width: 1659px) {
+  #legend {
+    grid-template-columns: auto;
+  }
+
+  #legend .config .options .row {
+    display: grid;
+    grid-template-columns: minmax(auto, 280px) minmax(auto, 280px);
+    gap: 3rem;
+  }
+
+  #legend .config .module-header {
+    margin-top: 0;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  #legend {
+    grid-template-columns: auto;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  #legend .config .page-header {
+    margin-bottom: 3rem;
+  }
+  
+  #legend .config .options {
+    position: unset;
+  }
+
+  #legend .config .options .row {
+    display: grid;
+    grid-template-columns: minmax(auto, 280px);
+    gap: 2rem;
+  }
+
+}

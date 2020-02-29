@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <title>highlight_collections</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <rect x="12.22472" y="15.89519" width="72" height="40.02985"/>
+        <path d="M179.77526,23.89519V47.925h-56V23.89519h56m8-8h-72V55.925h72V15.89519Z"/>
+        <rect x="115.77528" y="79.98507" width="72" height="40.02985"/>
+        <path d="M76.22472,87.98506v24.02988h-56V87.98506h56m8-8h-72v40.02988h72V79.98506Z"/>
+        <rect x="115.77528" y="144.07496" width="72" height="40.02985"/>
+        <rect x="12.22472" y="144.07496" width="72" height="40.02985"/>
+      </g>
+    </g>
+  </g>
+</svg>

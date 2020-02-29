@@ -1,0 +1,45 @@
+#legend .page .row.basics {
+  grid-auto-flow: unset;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 3rem;
+  row-gap: 2rem;
+  margin: 0 0 3rem;
+}
+
+#legend .page .row.basics .col {
+  font-family: var(--fontText);
+}
+
+#legend .page .row.basics .col .value {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0 0 4px;
+  text-transform: lowercase;
+}
+
+#legend .page .row.basics .line {
+  grid-column: span 6;
+  position: relative;
+  height: 1px;
+  background-color: var(--text-primary-5);
+}
+
+#legend .page .row.basics .line::before,
+#legend .page .row.basics .line::after {
+  content: ' ';
+  position: absolute;
+  top: 1px;
+  width: 1rem;
+  height: 2px;
+  background-color: var(--text-primary-5);
+}
+
+#legend .page .row.basics .line::after {
+  right: 0;
+}
+
+#legend .page .row.basics .line:last-child::before,
+#legend .page .row.basics .line:last-child::after {
+  top: unset;
+  bottom: 1px;
+}

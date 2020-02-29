@@ -1,0 +1,521 @@
+#inspect {
+  position: relative;
+  display: grid;
+  row-gap: 3rem;
+  min-height: 100vh;
+  align-content: start;
+  margin: -40px auto 0;
+  padding: 0 9rem 3rem;
+  color: rgba(255, 255, 255, 0.8);
+  --exotic: 48, 61%, 50%;
+  --legendary: 279, 36%, 29%;
+  --rare: 213, 34%, 48%;
+  --uncommon: 126, 35%, 32%;
+  --common: 0, 0%, 80%;
+  --exoticDark: 48, 71%, 5%;
+  --legendaryDark: 279, 36%, 5%;
+  --rareDark: 213, 34%, 6%;
+  --uncommonDark: 126, 35%, 5%;
+  --commonDark: 0, 0%, 7%;
+  --rarityHeight: 100px;
+}
+
+#inspect .wrap {
+  max-width: 1024px;
+  display: grid;
+  row-gap: 3rem;
+}
+
+#inspect .foundry {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 569px;
+  max-height: 569px;
+}
+
+#inspect .screenshot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#inspect .screenshot .image {
+  background-size: cover;
+}
+
+#inspect .foundry .image.dl {
+  opacity: 0.6;
+}
+
+#inspect .item-rarity {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--rarityHeight);
+}
+
+#inspect .item-rarity::before {
+  content: ' ';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+}
+
+#inspect .item-rarity.exotic,
+#inspect .item-rarity.exotic::before {
+  background: linear-gradient(to right, hsla(var(--exotic), 0.6), hsla(var(--exotic), 0.2) 30%, hsla(var(--exotic), 0.1));
+}
+
+#inspect .item-rarity.legendary,
+#inspect .item-rarity.legendary::before {
+  background: linear-gradient(to right, hsla(var(--legendary), 0.6), hsla(var(--legendary), 0.2) 30%, hsla(var(--legendary), 0.1));
+}
+
+#inspect .item-rarity.rare,
+#inspect .item-rarity.rare::before {
+  background: linear-gradient(to right, hsla(var(--rare), 0.6), hsla(var(--rare), 0.2) 30%, hsla(var(--rare), 0.1));
+}
+
+#inspect .item-rarity.uncommon,
+#inspect .item-rarity.uncommon::before {
+  background: linear-gradient(to right, hsla(var(--uncommon), 0.6), hsla(var(--uncommon), 0.2) 30%, hsla(var(--uncommon), 0.1));
+}
+
+#inspect .item-rarity.common,
+#inspect .item-rarity.common::before {
+  background: linear-gradient(to right, hsla(var(--common), 0.6), hsla(var(--common), 0.2) 30%, hsla(var(--common), 0.1));
+}
+
+
+
+
+#inspect .row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 3rem;
+  width: 100%;
+}
+
+
+
+#inspect .row.header {
+  padding-top: calc(var(--rarityHeight) + 3rem);
+  padding-bottom: 0;
+  position: relative;
+  z-index: 1;
+  grid-template-columns: 96px auto;
+  row-gap: 2rem;
+  column-gap: 2rem;
+}
+
+#inspect .row.header .icon {
+  position: relative;
+  width: 96px;
+  height: 96px;
+}
+
+#inspect .row.header .icon .image {
+  box-shadow: inset 0 0 0 3px rgb(204, 204, 204);
+}
+
+#inspect .row.header .text {
+  position: relative;
+}
+
+#inspect .row.header .text .name {
+  font-family: var(--fontText);
+  font-size: 72px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1;
+  color: rgb(255, 255, 255);
+  margin: -7px 0 9px -2px;
+}
+
+#inspect .row.header .text .type {
+  font-family: var(--fontText);
+  font-size: 28px;
+  text-transform: uppercase;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#inspect .row.header .flair {
+  font-size: 20px;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  grid-column: 1/3;
+}
+
+
+
+
+
+#inspect .row.values {
+  grid-template-columns: 120px minmax(400px, auto);
+}
+
+#inspect .row.values .primary .stat {
+  display: grid;
+  grid-template-columns: min-content auto;
+  column-gap: 10px;
+  align-items: center;
+  line-height: 1;
+}
+
+#inspect .row.values .primary .stat .icon svg {
+  width: 48px;
+  height: 48px;
+  pointer-events: none;
+}
+
+#inspect .row.values .primary .stat .icon.solar svg {
+  fill: #ef641f;
+}
+
+#inspect .row.values .primary .stat .icon.arc svg {
+  fill: #79bbe7;
+}
+
+#inspect .row.values .primary .stat .icon.void svg {
+  fill: #a371c2;
+}
+
+#inspect .row.values .primary .stat .text {
+  font-size: 62px;
+  font-weight: 500;
+  line-height: 48px;
+  margin: -6px 0 0;
+}
+
+#inspect .row.values .stats {
+  display: grid;
+  row-gap: 10px;
+}
+
+#inspect .row.values .stats .stat {
+  display: grid;
+  grid-template-columns: minmax(180px, 220px) auto;
+  align-items: center;
+  line-height: 1.6;
+}
+
+#inspect .row.values .stats .stat .name {
+  color: rgba(255, 255, 255, 0.6);
+  padding: 0 16px 0 0;
+  height: 16px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#inspect .row.values .stats .stat .value {
+  height: 16px;
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+#inspect .row.values .stats .stat .value.bar {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+#inspect .row.values .stats .stat .value.bar .int {
+  position: absolute;
+  top: 0;
+  right: 7px;
+  height: 100%;
+  display: grid;
+  align-content: center;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+#inspect .row.values .stats .stat .value .bar {
+  height: 100%;
+  background-color: #fff;
+  position: relative;
+}
+
+#inspect .row.values .stats .stat .value .bar::before {
+  content: attr(data-value);
+  position: absolute;
+  top: 0;
+  right: -16px;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  opacity: 0;
+}
+
+#inspect .row.values .stats .stat .value .bar.masterwork {
+  background-color: #c6ab3c;
+}
+
+#inspect .row.values .stats .stat .value .bar.modded {
+  background-color: #4ac362;
+}
+
+#inspect .row.values .stats .stat .value .text.masterwork {
+  color: #c6ab3c;
+}
+
+
+
+
+
+
+#inspect .sockets {
+  display: grid;
+  row-gap: 1rem;
+}
+
+#inspect .sockets .row.category {
+  grid-template-columns: 1fr;
+  row-gap: 10px;
+}
+
+#inspect .sockets .row.category .category-name {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  padding: 0 0 2px;
+}
+
+#inspect .sockets .row.category .category-sockets {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 64px);
+  grid-gap: 20px;
+}
+
+#inspect .sockets .row.category:not(.mods) .category-sockets {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Crect x='21.74707' y='19.5' width='8.25293' height='1.5' style='fill: %23fff;opacity: 0.03'/%3E%3Crect x='19.49414' y='21.74554' width='1.5' height='8.25446' style='fill: %23fff;opacity: 0.03'/%3E%3Cpolygon points='21.001 21 21.001 19.5 20.994 19.5 19.494 19.5 19.494 21 20.994 21 21.001 21' style='fill: %23fff;opacity: 0.15'/%3E%3Crect x='19.49414' width='1.5' height='3.75153' style='fill: %23fff;opacity: 0.03'/%3E%3Crect x='21.74707' y='4.4976' width='8.25293' height='1.5' style='fill: %23fff;opacity: 0.03'/%3E%3Crect x='19.49414' y='6.74414' width='1.5' height='12.01031' style='fill: %23fff;opacity: 0.03'/%3E%3Crect x='6.7478' y='4.5' width='12.00195' height='1.5' style='fill: %23fff;opacity: 0.03'/%3E%3Crect x='4.49414' width='1.5' height='3.75446' style='fill: %23fff;opacity: 0.03'/%3E%3Crect y='4.5' width='3.74854' height='1.5' style='fill: %23fff;opacity: 0.03'/%3E%3Cpolygon points='5.994 4.5 4.494 4.5 4.494 6 5.994 6 6.002 6 6.002 4.5 5.994 4.5' style='fill: %23fff;opacity: 0.15'/%3E%3Cpolygon points='20.99 4.5 19.49 4.5 19.49 6 20.99 6 20.998 6 20.998 4.5 20.99 4.5' style='fill: %23fff;opacity: 0.15'/%3E%3Crect x='6.73828' y='19.5' width='12.01025' height='1.5' style='fill: %23fff;opacity: 0.03'/%3E%3Crect x='4.49414' y='6.74554' width='1.5' height='12.00891' style='fill: %23fff;opacity: 0.03'/%3E%3Crect y='19.5' width='3.74854' height='1.5' style='fill: %23fff;opacity: 0.03'/%3E%3Crect x='4.49414' y='19.5' width='1.49866' height='1.5' style='fill: %23fff;opacity: 0.15'/%3E%3Crect x='4.49414' y='21.74554' width='1.5' height='8.25446' style='fill: %23fff;opacity: 0.03'/%3E%3C/svg%3E%0A");
+}
+
+#inspect .sockets .row.category .category-sockets .socket {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, 64px);
+  grid-gap: 10px;
+  position: relative;
+}
+
+#inspect .sockets .row.category .category-sockets .socket::after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: -11px;
+  width: 2px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+#inspect .sockets .row.category .category-sockets .socket:last-child::after {
+  content: none;
+}
+
+#inspect .sockets .row.category .category-sockets .socket.columned {
+  grid-template-columns: repeat(3, 64px);
+  grid-column: span 3;
+  justify-content: space-between;
+}
+
+#inspect .sockets .row.category .category-sockets .socket .plug {
+  position: relative;
+}
+
+#inspect .sockets .row.category .category-sockets .socket .plug .icon {
+  position: relative;
+  height: 64px;
+}
+
+#inspect .sockets .row.category .category-sockets .socket .plug a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#inspect .sockets .row.category .category-sockets .socket.intrinsic .plug:not(.active) {
+  display: none;
+}
+
+#inspect .sockets .row.category .category-sockets .socket:not(.intrinsic) .plug::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 0 2px rgb(204, 204, 204);
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 0.25s;
+  pointer-events: none;
+}
+
+#inspect .sockets .row.category .category-sockets .socket:not(.intrinsic) .plug::after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 0 2px rgb(204, 204, 204);
+  z-index: 3;
+  transform: scale(1) translateZ(0);
+  opacity: 0;
+  transition: box-shadow 0.25s, transform 0.25s, opacity 0.25s;
+  pointer-events: none;
+}
+
+#inspect .sockets .row.category .category-sockets .socket:not(.intrinsic) .plug.active {
+  background-color: #5a94bd;
+}
+
+#inspect .sockets .row.category:not(.mods) .category-sockets .socket:not(.intrinsic) .plug::before {
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.4);
+}
+
+#inspect .sockets .row.category:not(.mods) .category-sockets .socket .plug,
+#inspect .sockets .row.category:not(.mods) .category-sockets .socket .plug a,
+#inspect .sockets .row.category:not(.mods) .category-sockets .socket:not(.intrinsic) .plug::before,
+#inspect .sockets .row.category:not(.mods) .category-sockets .socket:not(.intrinsic) .plug::after {
+  border-radius: 100%;
+}
+
+#inspect .sockets .row.category:not(.mods) .category-sockets .socket:not(.intrinsic) .plug .icon .image {
+  background-size: 78%;
+}
+
+#inspect .sockets .row.category .category-sockets .socket:not(.intrinsic) .plug:hover::before {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#inspect .sockets .row.category .category-sockets .socket:not(.intrinsic) .plug:hover::after {
+  opacity: 1;
+  transform: scale(1.08) translateZ(0);
+  box-shadow: 0 0 0 2px rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+
+  #inspect .item-rarity {
+    height: 6.25rem;
+  }
+
+  #inspect .row.header {
+    padding-top: 5rem;
+    grid-template-columns: 72px auto;
+    grid-gap: 1.5rem;
+  }
+
+  #inspect .row.header .icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  #inspect .row.header .icon .image {
+    box-shadow: inset 0 0 0 2px rgb(204, 204, 204);
+  }
+  
+  #inspect .row.header .text .name {
+    font-size: 50px;
+    margin: -6px 0 8px -2px;
+  }
+  
+  #inspect .row.header .text .type {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  #inspect .row.header .text .description {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+  }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+  
+
+}
+
+@media screen and (max-width: 600px) {
+
+  #inspect {
+    grid-gap: 2rem;
+    padding: 0 2rem 2rem;
+  }
+
+  #inspect .wrap {
+    row-gap: 2rem;
+  }
+
+  #inspect .item-rarity {
+    height: 4.8rem;
+  }
+
+  #inspect .row.header {
+    padding-top: 4rem;
+    grid-template-columns: 48px auto;
+    grid-gap: 1rem;
+  }
+
+  #inspect .row.header .icon {
+    width: 48px;
+    height: 48px;
+  }
+  
+  #inspect .row.header .text .name {
+    font-size: 30px;
+    margin: -3px 0 7px -2px;
+  }
+  
+  #inspect .row.header .text .type {
+    font-size: 16px;
+    line-height: 1;
+  }
+  
+  #inspect .row.header .text .description {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+  
+
+
+
+
+}

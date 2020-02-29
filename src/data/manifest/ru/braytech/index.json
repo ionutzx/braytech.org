@@ -1,0 +1,79 @@
+{
+  "platform_xbox": {
+    "displayProperties": {
+      "name": "Xbox",
+      "description": "Платформа, к которой принадлежит профиль."
+    },
+    "itemType": 1,
+    "itemTypeDisplayName": "Платформа"
+  },
+  "platform_playstation": {
+    "displayProperties": {
+      "name": "Playstation",
+      "description": "Платформа, к которой принадлежит профиль."
+    },
+    "itemType": 1,
+    "itemTypeDisplayName": "Платформа"
+  },
+  "platform_steam": {
+    "displayProperties": {
+      "name": "Steam",
+      "description": "Платформа, к которой принадлежит профиль."
+    },
+    "itemType": 1,
+    "itemTypeDisplayName": "Платформа"
+  },
+  "platform_pc": {
+    "displayProperties": {
+      "name": "PC",
+      "description": "Платформа, к которой принадлежит профиль."
+    },
+    "itemType": 1,
+    "itemTypeDisplayName": "Платформа"
+  },
+  "warmind": {
+    "displayProperties": {
+      "name": "Superintendent",
+      "description": "Tom Chapman, creator and engineer of Braytech."
+    },
+    "itemType": 1,
+    "itemTypeDisplayName": "Artificial Intelligence"
+  },
+  "patron-veteran": {
+    "displayProperties": {
+      "name": "Subroutine",
+      "description": "This Guardian is a beacon of light who, through their actions, have proven themselves to value bravery and service above all else."
+    },
+    "itemType": 1,
+    "itemTypeDisplayName": "Patron Reward"
+  },
+  "patron": {
+    "displayProperties": {
+      "name": "Researcher",
+      "description": "A technical fellow at Clovis Bray, this Guardian seeks to improve Braytech."
+    },
+    "itemType": 1,
+    "itemTypeDisplayName": "Patron Reward"
+  },
+  "commonality": {
+    "displayProperties": {
+      "name": "Сообщество",
+      "description": "Процент индексируемых VOLUSPA игроков."
+    },
+    "itemType": 1
+  },
+  "score": {
+    "displayProperties": {
+      "name": "Общий счёт",
+      "description": "Эта запись отображает общий счёт."
+    },
+    "itemType": 1
+  },
+  "character_bound": {
+    "displayProperties": {
+      "name": "Индивидуально для персонажа",
+      "description": "Эти предметы индивидуальны для каждого персонажа. Это значит, что на каждом персонаже их нахождение уникально."
+    },
+    "itemType": 1
+  }
+}

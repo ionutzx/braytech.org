@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Destiny Seals';
+  src: url('Destiny-Seals.woff?hi1cl5');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="destiny-seal-"], [class*=" destiny-seal-"] {
+  font-family: 'Destiny Seals' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
+.destiny-seal-3303651245:before {
+  content: "\e90d";
+}
+.destiny-seal-991908404:before {
+  content: "\e908";
+}
+.destiny-seal-2516503814:before {
+  content: "\e909";
+}
+.destiny-seal-2588182977:before {
+  content: "\e90a";
+}
+.destiny-seal-2693736750:before {
+  content: "\e90b";
+}
+.destiny-seal-3170835069:before {
+  content: "\e90c";
+}
+.destiny-seal-1002334440:before {
+  content: "\e904";
+}
+.destiny-seal-147928983:before {
+  content: "\e905";
+}
+.destiny-seal-2039028930:before {
+  content: "\e906";
+}
+.destiny-seal-4097789885:before {
+  content: "\e907";
+}
+.destiny-seal-1162218545:before {
+  content: "\e902";
+}
+.destiny-seal-3303651244:before {
+  content: "\e903";
+}
+.destiny-seal-2209950401:before {
+  content: "\e900";
+}
+.destiny-seal-3481101973:before {
+  content: "\e901";
+}

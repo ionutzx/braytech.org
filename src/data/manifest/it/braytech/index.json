@@ -1,0 +1,71 @@
+{
+  "platform_xbox": {
+    "displayProperties": {
+      "name": "Xbox",
+      "description": "La piattaforma d'appartenenza di questo profilo."
+    },
+    "itemType": 1,
+    "itemTypeDisplayName": "Piattaforma"
+  },
+  "platform_playstation": {
+    "displayProperties": {
+      "name": "Playstation",
+      "description": "La piattaforma d'appartenenza di questo profilo."
+    },
+    "itemType": 1,
+    "itemTypeDisplayName": "Piattaforma"
+  },
+  "platform_pc": {
+    "displayProperties": {
+      "name": "PC",
+      "description": "La piattaforma d'appartenenza di questo profilo."
+    },
+    "itemType": 1,
+    "itemTypeDisplayName": "Piattaforma"
+  },
+  "warmind": {
+    "displayProperties": {
+      "name": "Sovrintendente",
+      "description": "Tom Chapman, creatore e ingeniere di Braytech."
+    },
+    "itemType": 1,
+    "itemTypeDisplayName": "Intelligenza Artificiale"
+  },
+  "patron-veteran": {
+    "displayProperties": {
+      "name": "Subroutine",
+      "description": "Questo guardiano è un faro di luce che, attraverso le sue azioni, ha dimostrato di valorizzare il coraggio e il servizio sopra ogni altra cosa."
+    },
+    "itemType": 1,
+    "itemTypeDisplayName": "Ricompensa Patron"
+  },
+  "patron": {
+    "displayProperties": {
+      "name": "Ricercatore",
+      "description": "Un compagno tecnico di Clovis Bray, questo Guardiano cerca di migliorare Braytech."
+    },
+    "itemType": 1,
+    "itemTypeDisplayName": "Ricompensa Patron"
+  },
+  "commonality": {
+    "displayProperties": {
+      "name": "Rarità",
+      "description": "Una rappresentazione del numero di giocatori che hanno acquisito o riscattato questa voce."
+    },
+    "itemType": 1
+  },
+  "score": {
+    "displayProperties": {
+      "name": "Valore punteggio",
+      "description": "Il valore in punti di questo trionfo."
+    },
+    "itemType": 1
+  },
+  "character_bound": {
+    "displayProperties": {
+      "name": "Esclusivo al personaggio",
+      "description": "Questi oggetti sono esclusivi al personaggio. Ciò significa che ogni personaggio li scoprirà unicamente."
+    },
+    "itemType": 1
+  }
+}

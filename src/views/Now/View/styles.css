@@ -1,0 +1,136 @@
+#now .group.head .module {
+  display: grid;
+}
+
+#now .module .list.activities {
+  display: grid;
+  grid-gap: 3px;
+}
+
+#now .module .list.activities li {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+#now .module .list.activities li > div:not(.name) {
+  display: grid;
+  grid-template-columns: 38px 55px 45px;
+  grid-template-columns: 38px 55px;
+  grid-gap: 6px;
+  text-align: right;
+  align-items: center;
+}
+
+#now .module .list.activities li .name {
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 1rem 0 0;
+}
+
+#now .module .list.activities li .game-version-icon {
+  height: 38px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  background-color: rgba(211, 208, 36, 0.6);
+}
+
+#now .module .list.activities li.warmind .game-version-icon {
+  background-color: rgba(99, 182, 201, 0.6);
+}
+
+#now .module .list.activities li.forsaken .game-version-icon {
+  background-color: rgba(153, 61, 138, 0.6);
+}
+
+#now .module .list.activities li.shadowkeep .game-version-icon {
+  background-color: rgba(128, 34, 45, 0.6);
+}
+
+#now .module .list.activities li .game-version-icon span::before {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+#now .module .list.activities li .time {
+  color: rgba(255, 255, 255, 0.6);
+  grid-column: 2/3;
+  text-transform: lowercase;
+}
+
+/* #now .module .list.activities li .light {
+  color: #e5d163;
+} */
+
+#now .module .list.activities li .light span {
+  position: relative;
+  margin: 0 0 0 8px;
+}
+
+#now .module .list.activities li .light span::before {
+  content: 'l';
+  position: absolute;
+  top: 3px;
+  left: -7px;
+  font-family: 'Braytech' !important;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
+#now .module .list.modifiers li {
+  padding: 0 0rem;
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  grid-template-rows: 1fr;
+  align-items: start;
+  height: unset;
+  margin: 0 0 14px;
+}
+
+#now .module .list.modifiers li:last-child {
+  margin: 0;
+}
+
+#now .module .list.modifiers li .icon {
+  padding: 3px 0 0;
+}
+
+#now .module .list.modifiers li .icon .image {
+  position: relative;
+  height: 32px;
+  width: 32px;
+}
+
+#now .module .list.modifiers li .text {
+  margin: 0 0 0 1rem;
+  font-size: 14px;
+}
+
+#now .module .list.modifiers li .text .name {
+  margin: 0 0 3px;
+}
+
+#now .module .list.modifiers li .text .description {
+  white-space: pre-line;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+
+
+
+#now .seasonal-artifact .tiers {
+  margin: 0 0 20px;
+}

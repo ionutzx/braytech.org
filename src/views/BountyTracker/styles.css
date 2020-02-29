@@ -1,0 +1,175 @@
+#bounty-tracker {
+  padding: 4rem 3rem 3rem;
+  display: grid;
+  min-height: calc(100vh - 212px);
+}
+
+#bounty-tracker .list.bounties li {
+  height: unset;
+  display: grid;
+  font-size: 14px;
+}
+
+#bounty-tracker .list.bounties > li:not(.header) > ul > li {
+  padding: 6px 0;
+}
+
+#bounty-tracker .list.bounties > li::after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: unset;
+  bottom: -2px;
+  height: 1px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: none;
+}
+
+#bounty-tracker .list.bounties > li > ul {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 36px minmax(280px, 800px) minmax(200px, auto) minmax(100px, 180px) minmax(100px, 140px);
+  align-items: center;
+}
+
+#bounty-tracker .list.bounties .header,
+#bounty-tracker .list.bounties .header li {
+  height: 38px;
+  user-select: none;
+}
+
+#bounty-tracker .list.bounties .header ul .col {
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+#bounty-tracker .list.bounties .header ul .col:not(.no-sort):hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#bounty-tracker .list.bounties .header ul .col.no-sort {
+  cursor: not-allowed;
+}
+
+#bounty-tracker .list.bounties .header ul .col.sort {
+  font-size: 16px;
+}
+
+#bounty-tracker .list.bounties .header ul .col.sort.asc .full {
+  position: relative;
+}
+
+#bounty-tracker .list.bounties .header ul .col.sort.asc .full::after {
+  content: ' ASC';
+  position: relative;
+  top: -6px;
+  left: 4px;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+#bounty-tracker .list.bounties > li > ul > li {
+  margin: 0;
+}
+
+#bounty-tracker .list.bounties > li > ul > .bounty-item .list.inventory-items {
+  width: 100%;
+  grid-template-columns: 1fr;
+}
+
+#bounty-tracker .list.bounties > li > ul > .bounty-item .list.inventory-items li.tracked::before {
+  box-shadow: inset 0 0 0 2px #b5fc73;
+}
+
+#bounty-tracker .list.bounties > li > ul > .bounty-text .name {
+  margin: 0 0 2px;
+  font-size: 16px;
+}
+
+#bounty-tracker .list.bounties > li > ul > .bounty-text .description {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#bounty-tracker .list.bounties > li > ul > .bounty-text .description pre {
+  white-space: pre-line;
+  line-height: 1.4;
+}
+
+#bounty-tracker .list.bounties > li > ul > .objectives .progress-bar {
+  max-width: 360px;
+}
+
+#bounty-tracker .list.bounties > li > ul > .reward-items .list.inventory-items {
+  grid-template-columns: repeat(auto-fill, 24px);
+}
+
+#bounty-tracker .list.bounties > li > ul > .expires {
+  justify-content: right;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  #bounty-tracker {
+    padding: 3rem 2rem 2rem;
+    min-height: calc(100vh - 172px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#bounty-tracker.error {
+  padding: 4rem 3rem 3rem;
+  grid-template-columns: minmax(auto, 800px);
+  justify-content: center;
+}
+
+#bounty-tracker.error .properties {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#bounty-tracker.error .properties .name {
+  font-size: 38px;
+  font-weight: 600;
+  margin: 0 0 7px;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 7px;
+  margin-bottom: 1rem;
+}
+
+#bounty-tracker.error .properties .description {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+
+  #bounty-tracker.error {
+    padding: 3rem 2rem 2rem;
+  }
+
+  #bounty-tracker.error .properties .name {
+    font-size: 24px;
+  }
+  
+  #bounty-tracker.error .properties .description {
+    font-size: 14px;
+  }  
+
+}

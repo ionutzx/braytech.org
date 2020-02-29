@@ -1,0 +1,56 @@
+.user-module.weekly-vanguard-singe {
+  position: relative;
+}
+
+.user-module.weekly-vanguard-singe .icon {
+  margin: 24px 0 0;
+}
+
+.user-module.weekly-vanguard-singe .icon svg {
+  fill: #ffffff;
+  height: 100%;
+  width: 100%;
+}
+
+.user-module.weekly-vanguard-singe .icon .outer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 80%;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+.user-module.weekly-vanguard-singe .icon .inner {
+  width: 20%;
+  
+  display: none;
+}
+
+.user-module.weekly-vanguard-singe .icon.solar .inner svg {
+  fill: hsl(20, 87%, 53%);
+}
+
+.user-module.weekly-vanguard-singe .icon.arc .inner svg {
+  fill: hsl(204, 70%, 69%);
+}
+
+.user-module.weekly-vanguard-singe .icon.void .inner svg {
+  fill: hsl(277, 40%, 60%);
+}
+
+/* .user-module.weekly-vanguard-singe .icon .name {
+  margin: 2rem 0;
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 500;
+} */
+
+@media screen and (max-width: 600px) {
+
+  .user-module.weekly-vanguard-singe .icon .outer {
+    opacity: 0.1;
+  }
+
+}

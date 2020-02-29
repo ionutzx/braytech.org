@@ -1,0 +1,233 @@
+#character-select {
+  display: grid;
+  padding: 0;
+  margin: -40px auto 0;
+  width: 100%;
+  overflow: hidden;
+  min-height: calc(100vh - 80px);
+  align-content: start;
+}
+
+#character-select .module.head {
+  padding: calc(4rem + 40px) 3rem 3rem;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+#character-select .sub-header {
+  margin-bottom: 20px;
+}
+
+#character-select > .padder {
+  position: relative;
+  width: 100%;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: minmax(auto, 360px) minmax(200px, auto);
+  grid-gap: 3rem;
+}
+
+#character-select .device {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  height: 80vh;
+  pointer-events: none;
+}
+
+#character-select .device svg {
+  fill: #ffffff;
+  opacity: 0.1;
+  width: auto;
+  height: 100%;
+}
+
+#character-select .module .sub-header ~ .sub-header {
+  margin: 3rem 0 1rem;
+}
+
+#character-select .module.head .page-header {
+  margin-bottom: 0rem;
+}
+
+#character-select .module.head .text {
+  max-width: 680px;
+}
+
+#character-select .module.head .text p:first-child {
+  font-size: 16px;
+}
+
+#character-select .error {
+  margin: 0 0 3rem;
+  font-size: 14px;
+}
+
+#character-select .error button {
+  margin: 1rem 0 0;
+}
+
+#character-select .bungie-auth .memberships {
+  max-width: unset;
+  margin: unset;
+}
+
+#character-select .profile-search {
+  margin: 3rem 0 0;
+}
+
+#character-select.loading .profile-search .list li .icon,
+#character-select.loading .profile-search .list li .displayName {
+  transition: opacity 0.25ms;
+}
+
+#character-select .profile .user {
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: minmax(200px, 360px) 474px;
+}
+
+#character-select .profile .summary .displayName {
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 500;
+  margin: 0 0 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#character-select .profile .summary .clan {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#character-select .profile .summary .clan::before {
+  content: '// ';
+  white-space: pre-line;
+}
+
+#character-select .profile .summary .stamps {
+  margin: 1.5rem 0 2.5rem;
+}
+
+#character-select .profile .summary .basics {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+#character-select .profile .summary .basics > div {
+  position: relative;
+  font-size: 14px;
+  line-height: 10px;
+}
+
+#character-select .profile .summary .basics > div:last-child {
+  margin: 0;
+}
+
+#character-select .profile .summary .basics div .name {
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.4;
+}
+
+#character-select .profile .summary .basics div .value {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+#character-select .characters-list {
+  padding-bottom: unset;
+  height: unset;
+}
+
+#character-select .characters-list .list li {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#character-select.loading .form .field,
+#character-select.loading .form .field input,
+#character-select.loading .list li,
+#character-select.loading .profile {
+  pointer-events: none;
+}
+
+#character-select.loading .list li .icon,
+#character-select.loading .list li .displayName,
+#character-select.loading .profile .user {
+  opacity: 0;
+}
+
+#character-select.loading .form .field input {
+  color: transparent !important;
+}
+
+@media screen and (max-width: 1280px) {
+
+  #character-select .profile .user {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  
+
+}
+
+@media screen and (max-width: 768px) {
+
+  #character-select > .padder {
+    grid-template-columns: minmax(200px, auto) minmax(300px, auto);
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  #character-select > .padder {
+    padding: 2rem;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  #character-select .device {
+    top: 4rem;
+    right: -25%;
+    height: 90vw;
+  }
+
+  #character-select .module.head {
+    padding: calc(3rem + 40px) 2rem 2rem;
+  }
+
+  /* #character-select .module .sub-header ~ .sub-header {
+    margin: 2rem 0 1rem;
+  } */
+
+  #character-select .error {
+    margin: 0 0 2rem;
+  }
+
+  #character-select .profile .user {
+    grid-gap: 2rem;
+  }
+
+  #character-select .profile .summary .displayName {
+    font-size: 32px;
+  }
+
+  #character-select .profile .summary .clan {
+    font-size: 16px;
+  }
+
+  #character-select .profile .summary .basics {
+    display: none;
+  }
+
+  #character-select .profile .summary .stamps {
+    margin-bottom: 0;
+  }
+}
+

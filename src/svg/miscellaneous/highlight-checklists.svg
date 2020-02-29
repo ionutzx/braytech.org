@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <title>highlight_checklists</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <rect x="76" y="11.91011" width="48" height="48"/>
+        <path d="M179.91013,19.9101v32h-32v-32h32m8-8h-48v48h48v-48Z"/>
+        <rect x="12.08989" y="11.91011" width="48" height="48"/>
+        <path d="M116,84v32H84V84h32m8-8H76v48h48V76Z"/>
+        <rect x="139.91011" y="76" width="48" height="48"/>
+        <rect x="12.08989" y="76" width="48" height="48"/>
+        <path d="M116,148.08991v32H84v-32h32m8-8H76v48h48v-48Z"/>
+        <path d="M179.91013,148.08991v32h-32v-32h32m8-8h-48v48h48v-48Z"/>
+        <path d="M52.08988,148.08991v32h-32v-32h32m8-8h-48v48h48v-48Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

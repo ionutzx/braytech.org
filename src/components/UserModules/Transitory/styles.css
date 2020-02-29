@@ -1,0 +1,8 @@
+.user-module.fireteam > .list.fireteam-members > li > .member-link {
+  max-width: unset;
+}
+
+.user-module.fireteam .info {
+  padding: 2rem 0;
+  text-align: center;
+}

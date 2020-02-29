@@ -1,0 +1,491 @@
+#archives.chalice-of-opulence .content {
+  grid-template-columns: minmax(auto, 680px) minmax(200px, auto);
+}
+
+#archives.chalice-of-opulence .module .sub-header ~ .sub-header {
+  margin: 3rem 0 1rem;
+}
+
+#archives.chalice-of-opulence .frame {
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#archives.chalice-of-opulence .frame .flair .image.corner {
+  padding-bottom: 99.7059%;
+}
+
+#archives.chalice-of-opulence .frame .flair .image.leviathan {
+  background-size: 94%;
+}
+
+#archives.chalice-of-opulence .frame .flair .image.ring-inner {
+  background-size: 69%;  
+  transition: opacity 0.5s, background-size 0.5s;
+}
+
+#archives.chalice-of-opulence .frame .flair .image.ring-outer {
+  background-size: 75%;
+  transition: opacity 0.5s, background-size 0.5s;
+}
+
+#archives.chalice-of-opulence .frame .flair.active .image.leviathan,
+#archives.chalice-of-opulence .frame .flair.active .image.ring-outer {
+  animation: rotate-logo-feature 60s linear infinite;
+}
+
+#archives.chalice-of-opulence .frame .flair.active .image.ring-inner {
+  animation: rotate-logo-feature 60s linear infinite reverse;
+}
+
+#archives.chalice-of-opulence .frame .flair.active .image.ring-inner {
+  background-size: 64%;
+}
+
+#archives.chalice-of-opulence .frame .flair.active .image.ring-outer {
+  background-size: 70%;
+}
+
+#archives.chalice-of-opulence .frame .flair .image.chalice {
+  background-size: 47.5%;
+  background-position-y: 51%;
+}
+
+#archives.chalice-of-opulence .frame .flair .image.dl.active {
+  opacity: 0;
+}
+
+#archives.chalice-of-opulence .frame .image.corner.active {
+  position: absolute;
+  top: 0;
+}
+
+#archives.chalice-of-opulence .frame .flair.active .image.dl:not(.active) {
+  opacity: 0;
+}
+
+#archives.chalice-of-opulence .frame .flair.active .image.dl.active {
+  opacity: 1;
+}
+
+#archives.chalice-of-opulence .frame .ui {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+#archives.chalice-of-opulence .frame .ui .slots {
+  display: grid;
+  grid-template: 1fr 1fr 1fr/1fr 1fr 1fr;
+  height: 100%;
+}
+
+#archives.chalice-of-opulence .frame .ui .slots > [class^="slot"] {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+#archives.chalice-of-opulence .frame .ui .slots [class^="slot"] .slot-inner {
+  position: relative;
+  max-width: 72px;
+  max-height: 72px;
+  width: 100%;
+}
+
+#archives.chalice-of-opulence .frame .ui .slots [class^="slot"] .slot-inner .active-plug .list.chalice-items .linked {
+  background-color: rgba(146, 146, 146, 0.8);
+  cursor: pointer;
+}
+
+html.backdropfilter #archives.chalice-of-opulence .frame .ui .slots [class^="slot"] .slot-inner .active-plug .list.chalice-items .linked {
+  background-color: rgba(146, 146, 146, 0);
+  backdrop-filter: blur(4px) saturate(1.2);
+}
+
+#archives.chalice-of-opulence .frame .ui .slots [class^="slot"] .slot-inner .active-plug .list.chalice-items {
+  grid-template-columns: 1fr;
+}
+
+#archives.chalice-of-opulence .frame .ui .slots [class^="slot"] .slot-inner .active-plug .image.dl.next-plug {
+  top: -26px;
+  left: -26px;
+  width: 124px;
+  height: 124px;
+  animation: rotate-logo-feature 60s linear infinite;
+  opacity: 0.5;
+}
+
+#archives.chalice-of-opulence .frame .ui .slots .button.slot {
+  height: unset;
+  max-width: 72px;
+  max-height: 72px;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#archives.chalice-of-opulence .frame .ui .slots .button.slot::before {
+  box-shadow: inset 0 0 0 2px rgba(214, 214, 214, 0.8);
+}
+
+#archives.chalice-of-opulence .frame .ui .slots .button.slot .image {
+  position: relative;
+  width: 100%;
+  height: unset;
+  max-width: 72px;
+  padding-bottom: 100%;
+}
+
+#archives.chalice-of-opulence .frame .ui .slots .button.slot .image::before {
+  content: 'I';
+  position: absolute;
+  top: -24px;
+  left: 0;
+  width: calc(100% - 32px);
+  padding: 0 16px;
+  font-family: serif;
+  color: #dabd9a;
+  color: #fff;
+  text-align: center;
+  opacity: 0.8;
+}
+
+#archives.chalice-of-opulence .frame .ui .slots .slot1 {
+  grid-column: 2/3;
+}
+
+#archives.chalice-of-opulence .frame .ui .slots .slot2 {
+  grid-row: 2/3;
+}
+
+#archives.chalice-of-opulence .frame .ui .slots .slot2 .button.slot .image::before {
+  content: 'II';
+  text-align: left;
+}
+
+#archives.chalice-of-opulence .frame .ui .slots .slot3 {
+  grid-row: 2/3;
+  grid-column: 3/4;
+}
+
+#archives.chalice-of-opulence .frame .ui .slots .slot3 .button.slot .image::before {
+  content: 'III';
+  text-align: right;
+}
+
+#archives.chalice-of-opulence .frame .ui .slots .slot4 {
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+
+#archives.chalice-of-opulence .frame .ui .slots .slot4 .button.slot .image::before {
+  content: 'IV';
+  display: none;
+}
+
+#archives.chalice-of-opulence .frame .ui .slots .slotZ {
+  z-index: 10;
+}
+
+#archives.chalice-of-opulence .overlay {
+  position: absolute;
+  width: 467px;
+  /* width: 309px; */
+  top: 0;
+  left: 79px;
+  z-index: 11;
+}
+
+#archives.chalice-of-opulence .overlay .list.chalice-items li {
+  background-color: rgba(146, 146, 146, 0.8);
+  cursor: pointer;
+}
+
+html.backdropfilter #archives.chalice-of-opulence .overlay {
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(7px) saturate(1.2);
+}
+
+html.backdropfilter .wrapper.dark-mode #archives.chalice-of-opulence .overlay {
+  backdrop-filter: blur(7px) saturate(1.2);
+}
+
+#archives.chalice-of-opulence .overlay .list.chalice-items li.active {
+  background-color: rgba(218, 189, 154, 0.6);
+}
+
+html.backdropfilter #archives.chalice-of-opulence .overlay .list.chalice-items li {
+  background-color: rgba(146, 146, 146, 0.2);
+}
+
+html.backdropfilter #archives.chalice-of-opulence .overlay .list.chalice-items li.active {
+  background-color: rgba(218, 189, 154, 0.6);
+}
+
+#archives.chalice-of-opulence .overlay .list.chalice-items li.active::before {
+  box-shadow: inset 0 0 0 2px rgba(218, 189, 154, 1);
+}
+
+html.backdropfilter #archives.chalice-of-opulence .overlay .list.chalice-items li.active {
+  background-color: rgba(218, 189, 154, 0.4);
+}
+
+html.backdropfilter #archives.chalice-of-opulence .overlay .list.chalice-items li.active::before {
+  box-shadow: inset 0 0 0 2px rgba(218, 189, 154, 1);
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  #archives.chalice-of-opulence .content {
+    grid-template-columns: 1fr;
+  }
+
+  #archives.chalice-of-opulence .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    padding: calc(3rem + 40px) 3rem calc(3rem + 60px);
+    box-shadow: none;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  html.backdropfilter #archives.chalice-of-opulence .overlay {
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(17px) saturate(1.2);
+  }
+
+  #archives.chalice-of-opulence .overlay .list.chalice-items li {
+    background-color: rgba(146, 146, 146, 0);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #archives.chalice-of-opulence .overlay {
+    padding: calc(2rem + 40px) 2rem calc(2rem + 60px);
+  }
+
+  #archives.chalice-of-opulence .module .sub-header ~ .sub-header {
+    margin: 2rem 0 1rem;
+  }
+
+  #archives.chalice-of-opulence .frame .ui .slots [class^="slot"] .slot-inner {
+    max-width: 48px;
+    max-height: 48px;
+  }
+
+  #archives.chalice-of-opulence .frame .ui .slots [class^="slot"] .slot-inner .active-plug .image.dl.next-plug {
+    top: -17px;
+    left: -17px;
+    width: 82px;
+    height: 82px;
+  }
+
+  #archives.chalice-of-opulence .frame .ui .slots .button.slot {
+    max-width: 48px;
+    max-height: 48px;
+  }
+  
+  #archives.chalice-of-opulence .frame .ui .slots .button.slot .image {
+    max-width: 48px;
+  }
+  
+}
+
+
+
+
+#archives.chalice-of-opulence .module.items {
+  display: grid;
+  row-gap: 2rem;
+  column-gap: 3rem;
+  grid-template-columns: auto max-content;
+}
+
+#archives.chalice-of-opulence .module.items .results .info {
+  
+}
+
+#archives.chalice-of-opulence .shortcuts {
+  display: grid;
+  row-gap: 2rem;
+  column-gap: 3rem;
+  grid-template-columns: minmax(auto, calc(4 * 64px + 3 * 3px)) minmax(auto, calc(5 * 64px + 4 * 3px));
+}
+
+#archives.chalice-of-opulence .inventory-items {
+  grid-template-columns: repeat(auto-fill, 64px);
+}
+
+#archives.chalice-of-opulence .weapons .inventory-items {
+  grid-template-columns: repeat(4, 64px);
+}
+
+
+@media screen and (max-width: 1800px) {
+  #archives.chalice-of-opulence .module.items {
+    grid-template-columns: calc(4 * 64px + 3 * 3px) auto;
+  }
+
+  #archives.chalice-of-opulence .shortcuts {
+    grid-template-columns: 1fr;
+  }
+
+  #archives.chalice-of-opulence .inventory-items,
+  #archives.chalice-of-opulence .weapons .inventory-items {
+    grid-template-columns: repeat(auto-fill, 64px);
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  #archives.chalice-of-opulence .module.items {
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #archives.chalice-of-opulence .inventory-items,
+  #archives.chalice-of-opulence .weapons .inventory-items {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+#archives.chalice-of-opulence .list.chalice-items {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 7px;
+}
+
+#archives.chalice-of-opulence .list.chalice-items .list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 7px;
+}
+
+#archives.chalice-of-opulence .list.chalice-items li.apply {
+  display: none;
+  justify-content: center;
+  align-content: center;
+  font-size: 18px;
+}
+
+#archives.chalice-of-opulence .list.chalice-items li {
+  padding: 0;
+  margin: 0;
+  height: initial;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+
+#archives.chalice-of-opulence .list.chalice-items li::before {
+  box-shadow: inset 0 0 0 2px rgb(185, 185, 185);
+}
+
+#archives.chalice-of-opulence .list.chalice-items li .text {
+  display: none;
+}
+
+#archives.chalice-of-opulence .list.chalice-items li .icon {
+  position: relative;
+  width: 100%;
+  height: unset;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+
+#archives.chalice-of-opulence .list.chalice-items li.subclass .icon .image {
+  transform: rotate(-45deg) scale(1.4);
+}
+
+@media screen and (max-width: 1280px) {
+  #archives.chalice-of-opulence .list.chalice-items {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #archives.chalice-of-opulence .list.chalice-items {
+    grid-template-columns: 1fr;
+  }
+
+  #archives.chalice-of-opulence .overlay .list.chalice-items .list {
+    grid-template-columns: 1fr 48px;
+  }
+
+  #archives.chalice-of-opulence .overlay .list.chalice-items li.apply {
+    display: grid;
+  }
+
+  #archives.chalice-of-opulence .overlay .list.chalice-items li::before {
+    box-shadow: inset 0 0 0 1px rgba(214, 214, 214, 0.4);
+  }
+
+  #archives.chalice-of-opulence .overlay .list.chalice-items li.active::before {
+    box-shadow: inset 0 0 0 2px rgba(218, 189, 154, 1);
+  }
+  
+  #archives.chalice-of-opulence .overlay .list.chalice-items li.active::before {
+    box-shadow: inset 0 0 0 1px rgba(218, 189, 154, 1);
+  }
+  
+  html.backdropfilter #archives.chalice-of-opulence .overlay .list.chalice-items li.active::before {
+    box-shadow: inset 0 0 0 1px rgba(218, 189, 154, 1);
+  }
+
+  #archives.chalice-of-opulence .overlay .list.chalice-items li .icon {
+    position: relative;
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    flex-basis: 48px;
+  }
+  
+  #archives.chalice-of-opulence .overlay .list.chalice-items li .text {
+    flex-basis: calc(100% - 48px - 1rem);
+    margin: 0 0 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+}
+
+@media screen and (max-width: 600px) {
+  #archives.chalice-of-opulence .list.chalice-items {
+    
+  }
+}
+
+
+#archives.chalice-of-opulence .debug .inventory-items {
+  grid-template-columns: repeat(auto-fill, 64px);
+}
+
+#archives.chalice-of-opulence .debug .combo {
+  margin: 0 0 2rem;
+  display: grid;
+  grid-template-columns: calc(64px * 3 + 3px * 2) auto;
+  column-gap: 2rem;
+}

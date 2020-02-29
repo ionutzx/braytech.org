@@ -1,0 +1,38 @@
+
+.user-module.vendor .list.special li {
+  height: unset;
+  margin: 0;
+}
+
+.user-module.vendor .list.special > li {
+  margin: 0 0 3px;
+}
+
+.user-module.vendor .list.special > li > ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 48px auto 100px;
+  column-gap: 1rem;
+}
+
+.user-module.vendor .list.special > li > ul > li {
+  display: grid;
+  font-size: 14px;
+}
+
+.user-module.vendor .list.special > li > ul > li .list.inventory-items {
+  grid-template-columns: 1fr;
+}
+
+.user-module.vendor .list.special li ul li ul li ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 24px;
+  column-gap: 6px;
+}
+
+.user-module.vendor .list.special li ul li ul li ul li {
+  display: grid;
+  font-size: 14px;
+  text-align: right;
+}

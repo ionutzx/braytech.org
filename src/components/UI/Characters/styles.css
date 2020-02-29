@@ -1,0 +1,364 @@
+.characters-list {
+  width: 474px;
+}
+
+.characters-list .char .button {
+  height: unset;
+  max-width: unset;
+  padding-bottom: calc(96 / 474 * 100%);
+  margin: 0 0 3px;
+  color: #fff;
+}
+
+.characters-list .char .button .image.emblem {
+  background-size: cover;
+}
+
+.characters-list .char .button .image.emblem::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.characters-list .char .button .image.emblem.missing {
+  width: calc(96 / 474 * 100% - 50px);
+  height: calc(100% - 50px);
+  top: 18px;
+  left: 18px;
+  background-size: contain;
+}
+
+.characters-list .char .button.linked:hover .image.emblem::before {
+  opacity: 0.2;
+}
+
+.characters-list .char .button .class {
+  position: absolute;
+  left: 88px;
+  top: 15px;
+  font-size: 27px;
+}
+
+.characters-list .char .button .species {
+  position: absolute;
+  left: 88px;
+  top: 52px;
+  font-size: 16px;
+  opacity: 0.4;
+}
+
+.characters-list .char .button .light {
+  position: absolute;
+  right: 12px;
+  top: 13px;
+  font-size: 38px;
+  font-weight: 500;
+  font-family: var(--fontText);
+  line-height: 34px;
+  color: #e5d163;
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.characters-list .char .button .light::before {
+  content: 'l';
+  position: absolute;
+  top: 4px;
+  left: -16px;
+  font-family: 'Braytech' !important;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
+.characters-list .char .button .level {
+  position: absolute;
+  right: 12px;
+  top: 51px;
+  font-size: 18px;
+}
+
+.characters-list .char .button .progress-bar {
+  position: absolute;
+  left: 2px;
+  bottom: 2px;
+  height: 11px;
+  width: calc(100% - 4px);
+  height: 11px;
+}
+
+.characters-list .char .button .progress-bar .bar::before {
+  content: ' ';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+}
+
+.characters-list .char .button .progress-bar .bar .text {
+  display: none;
+}
+
+.characters-list .char .button .progress-bar .bar .fill {
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: width 1s;
+  opacity: 0;
+}
+
+.characters-list .char .title {
+  margin: 10px 0 0 0;
+  padding: 0 4px;
+  position: relative;
+  height: 26px;
+  display: grid;
+  grid-template-columns: 24px auto;
+  gap: 6px;
+  --titleColor: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.characters-list .char .title.colourised {
+  --titleColor: rgb(228, 144, 220);
+  background-color: rgba(228, 144, 220, 0.1);
+}
+
+.characters-list .char .title .icon {
+  display: grid;
+  align-content: center;
+}
+
+.characters-list .char .title .icon svg {
+  pointer-events: none;
+  height: 25px;
+  width: auto;
+  fill: var(--titleColor);
+}
+
+.characters-list .char .title .text {
+  display: grid;
+  align-content: center;
+  color: var(--titleColor);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+.characters-list .char .title::before,
+.characters-list .char .title::after {
+  content: ' ';
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--titleColor);
+  opacity: 0.4;
+}
+
+.characters-list .char .title::after {
+  top: unset;
+  bottom: -4px;
+}
+
+.characters-list .char .state {
+  margin: 10px 0 20px 0;
+}
+
+.characters-list .char .title ~ .state {
+  margin: 15px 0 20px 0;
+}
+
+.characters-list .char:last-child .state {
+  margin-bottom:  0;
+}
+
+.characters-list .char .state div {
+  display: inline;
+}
+
+.characters-list .char .state div::after {
+  content: ' ';
+}
+
+.characters-list .char .state .activity {
+  display: block;
+  margin: 0 0 2px;
+}
+
+.characters-list .char .state .time-before,
+.characters-list .char .state time {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+
+
+@media screen and (max-width: 1024px) {
+
+  .characters-list.responsive {
+    width: 100%;
+    height: 0;
+    padding-bottom: calc(96 / 474 * 100%);
+  }
+  
+  .characters-list.responsive .char .button .image.emblem.missing {
+    width: calc(96 / 474 * 100% - 37px);
+    height: calc(100% - 35px);
+    top: 14px;
+    left: 14px;
+  }
+  
+  .characters-list.responsive .char .button .class {
+    left: 20%;
+    top: 14%;
+    font-size: 18px;
+  }
+  
+  .characters-list.responsive .char .button .species {
+    left: 20%;
+    top: 53%;
+    font-size: 13px;
+  }
+  
+  .characters-list.responsive .char .button .light {
+    top: 10%;
+    right: 2%;
+    font-size: 26px;
+  }
+  
+  .characters-list.responsive .char .button .light::before {
+    font-size: 11px;
+    left: -12px;
+  }
+  
+  .characters-list.responsive .char .button .level {
+    top: 51%;
+    right: 2%;
+    font-size: 14px;
+  }
+  
+  .characters-list.responsive .char .button .progress-bar {
+    height: 7px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .characters-list {
+    width: 100%;
+    padding-bottom: calc(96 / 474 * 100%);
+  }
+
+  .characters-list .char .button .image.emblem.missing {
+    width: calc(96 / 474 * 100% - 37px);
+    height: calc(100% - 35px);
+    top: 14px;
+    left: 14px;
+  }
+
+  .characters-list .char .button .class {
+    left: 20%;
+    top: 14%;
+    font-size: 18px;
+  }
+
+  .characters-list .char .button .species {
+    left: 20%;
+    top: 53%;
+    font-size: 13px;
+  }
+
+  .characters-list .char .button .light {
+    top: 10%;
+    right: 2%;
+    font-size: 26px;
+    line-height: 24px;
+  }
+
+  .characters-list .char .button .light::before {
+    font-size: 11px;
+    left: -12px;
+  }
+
+  .characters-list .char .button .level {
+    top: 51%;
+    right: 2%;
+    font-size: 14px;
+  }
+
+  .characters-list .char .button .progress-bar {
+    height: 7px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.characters-list.mini {
+  width: 100%;
+  height: unset;
+  padding-bottom: unset;
+}
+
+.characters-list.mini .char .button {
+  height: 38px;
+  max-width: unset;
+  padding-bottom: unset;
+  display: grid;
+  grid-template-columns: calc(38px + 16px) 1fr min-content;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.characters-list.mini .char .button .image.emblem,
+.characters-list.mini .char .button .image.emblem.missing {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 38px;
+  height: 100%;
+  background-size: cover;
+}
+
+.characters-list.mini .char .button .class {
+  position: unset;
+  left: unset;
+  top: unset;
+  font-size: 16px;
+}
+
+.characters-list.mini .char .button .species,
+.characters-list.mini .char .button .progress-bar {
+  display: none;
+}
+
+.characters-list.mini .char .button .light {
+  position: relative;
+  right: unset;
+  top: unset;
+  padding: 0 1rem 0 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.characters-list.mini .char .button .light:before {
+  left: -8px;
+  top: 3px;
+  font-size: 7px;
+}

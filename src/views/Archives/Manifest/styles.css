@@ -1,0 +1,104 @@
+.list.result-items li {
+  height: unset;
+  display: grid;
+  font-size: 14px;
+}
+
+.list.result-items > li:not(.header) > ul > li {
+  padding: 6px 0;
+}
+
+.list.result-items > li::after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: unset;
+  bottom: -2px;
+  height: 1px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: none;
+}
+
+.list.result-items > li > ul {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 120px minmax(200px, 230px) minmax(200px, 230px) 120px;
+  align-items: center;
+}
+
+.list.result-items > li > ul > .hash {
+  font-family: monospace; 
+}
+
+/* .list.result-items .header,
+.list.result-items .header li {
+  height: 38px;
+  user-select: none;
+}
+
+.list.result-items .header ul .col {
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.list.result-items .header ul .col:not(.no-sort):hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.list.result-items .header ul .col.no-sort {
+  cursor: not-allowed;
+}
+
+.list.result-items .header ul .col.sort {
+  font-size: 16px;
+}
+
+.list.result-items .header ul .col.sort.asc .full {
+  position: relative;
+}
+
+.list.result-items .header ul .col.sort.asc .full::after {
+  content: ' ASC';
+  position: relative;
+  top: -6px;
+  left: 4px;
+  font-size: 12px;
+  pointer-events: none;
+} */
+
+/* .list.result-items > li > ul > li {
+  margin: 0;
+}
+
+.list.result-items > li > ul > .bounty-item .list.inventory-items {
+  width: 100%;
+  grid-template-columns: 1fr;
+}
+
+.list.result-items > li > ul > .bounty-text .name {
+  margin: 0 0 2px;
+  font-size: 16px;
+}
+
+.list.result-items > li > ul > .bounty-text .description {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.list.result-items > li > ul > .bounty-text .description pre {
+  white-space: pre-line;
+  line-height: 1.4;
+}
+
+.list.result-items > li > ul > .objectives .progress-bar {
+  max-width: 360px;
+}
+
+.list.result-items > li > ul > .reward-items .list.inventory-items {
+  grid-template-columns: repeat(auto-fill, 24px);
+}
+
+.list.result-items > li > ul > .expires {
+  justify-content: right;
+} */

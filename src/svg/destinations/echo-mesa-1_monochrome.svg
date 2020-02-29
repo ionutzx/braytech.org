@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 156.1 156.1">
+  <title>echo-mesa-1_monochrome</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_7" data-name="Layer 7">
+      <g style="opacity: 0.6">
+        <circle cx="78.04999" cy="78.05" r="77" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 1.4px;opacity: 0.5"/>
+        <circle cx="78.05" cy="78.05" r="70" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 4.199999999999999px;stroke-dasharray: 5.4980058670043945,16.494016647338867"/>
+        <circle cx="78.05" cy="78.05" r="77" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 2.0999999999999996px;stroke-dasharray: 8.341801643371582,8.341801643371582"/>
+        <circle cx="78.04999" cy="78.05" r="70" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 1.4px;opacity: 0.6"/>
+        <circle cx="78.04999" cy="78.05" r="77" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 0.7px"/>
+        <rect x="4.89999" y="66.5" width="6.3" height="14" style="fill: #fff"/>
+        <circle cx="78.04999" cy="78.05" r="55.86" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 1.5959999999999999px;stroke-dasharray: 4.788000106811523,11.17199993133545;opacity: 0.5"/>
+        <circle cx="78.04999" cy="78.05" r="51.072" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 1.5959999999999999px;stroke-dasharray: 4.788000106811523,11.17199993133545;opacity: 0.5"/>
+        <circle cx="78.04999" cy="78.05" r="46.284" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 1.5959999999999999px;stroke-dasharray: 1.5959999561309814,11.17199993133545;opacity: 0.25"/>
+        <circle cx="78.04999" cy="78.05" r="38.304" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 1.5959999999999999px;stroke-dasharray: 1.5959999561309814,3.191999912261963;opacity: 0.8"/>
+        <circle cx="78.04999" cy="78.05" r="35.112" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 1.5959999999999999px;stroke-dasharray: 1.5959999561309814,3.191999912261963;opacity: 0.6"/>
+        <circle cx="78.04999" cy="78.05" r="27.132" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 1.5959999999999999px;stroke-dasharray: 1.5959999561309814,3.191999912261963;opacity: 0.6"/>
+        <circle cx="78.04999" cy="78.05" r="23.94" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 1.5959999999999999px;stroke-dasharray: 1.5959999561309814,3.191999912261963;opacity: 0.8"/>
+        <circle cx="78.04999" cy="78.05" r="15.96" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 1.5959999999999999px;stroke-dasharray: 1.5959999561309814,1.5959999561309814;opacity: 0.6"/>
+        <path d="M78.05,23.786A54.264,54.264,0,1,0,132.314,78.05,54.26406,54.26406,0,0,0,78.05,23.786Zm0,71.82A17.556,17.556,0,1,1,95.606,78.05,17.55587,17.55587,0,0,1,78.05,95.606Z" style="fill: #fff;opacity: 0.2"/>
+      </g>
+    </g>
+  </g>
+</svg>

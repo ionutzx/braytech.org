@@ -1,0 +1,35 @@
+.user-module.lunar .list.inventory-items + .info {
+  margin: 1rem 0 0;
+}
+
+.user-module.lunar .story-mission {
+  display: grid;
+  grid-template-columns: 48px auto;
+  grid-gap: 1rem;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.user-module.lunar .story-mission .icon {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  font-size: 28px;
+  background-color: hsla(233, 84%, 11%, 0.8);
+  background-color: hsla(233, 44%, 41%, 0.8);
+  padding-bottom: unset;
+  height: 48px;
+}
+
+.user-module.lunar .story-mission .name {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+
+.user-module.lunar .story-mission .description {
+
+}
+
+.user-module.lunar .story-mission .description p {
+  color: rgba(255, 255, 255, 0.5);
+}

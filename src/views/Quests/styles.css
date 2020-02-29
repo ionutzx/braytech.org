@@ -1,0 +1,71 @@
+#quests {
+  padding: 4rem 3rem 3rem;
+  display: grid;
+  grid-template-columns: calc(64px * 5 + 3px * 4) calc(64px * 4 + 3px * 3) auto;
+  gap: 3rem;
+  align-content: start;
+  min-height: calc(100vh - 212px);
+}
+
+#quests .module .sub-header ~ .sub-header {
+  margin-top: calc(3rem - 7px);
+}
+
+#quests .module:nth-child(2) .sub-header ~ div p {
+  max-width: 300px;
+}
+
+#quests .list.inventory-items {
+  grid-template-columns: repeat(auto-fill, 64px);
+  gap: 3px;
+  margin: 20px 0 0;
+}
+
+#quests > .module:nth-child(4) {
+  grid-column: 4/5;
+}
+
+#quests.quest {
+  grid-template-columns: 1fr;
+}
+
+
+
+
+
+@media screen and (max-width: 1279px) {
+  #quests {
+    grid-template-columns: calc(48px * 5 + 3px * 4) calc(48px * 4 + 3px * 3) auto;
+  }
+
+  #quests .list.inventory-items {
+    grid-template-columns: repeat(auto-fill, 48px);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  #quests {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #quests {
+    padding: 3rem 2rem 2rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    min-height: calc(100vh - 172px);
+  }
+
+  #quests .module .sub-header ~ .sub-header {
+    margin-top: calc(2rem - 7px);
+  }
+
+  #quests .list.inventory-items {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  #quests .module:nth-child(2) .sub-header ~ div p {
+    max-width: unset;
+  }
+}

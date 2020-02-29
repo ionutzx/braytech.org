@@ -1,0 +1,134 @@
+#commonality {
+  padding: 0;
+  margin: -40px auto 0;
+  width: 100%;
+  display: grid;
+}
+
+#commonality .module.head {
+  padding: calc(4rem + 40px) 3rem 3rem;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+#commonality .module.head .page-header:last-child {
+  margin-bottom: 0;
+}
+
+#commonality .buff {
+  width: 100%;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 3rem;
+  row-gap: 3rem;
+}
+
+#commonality .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+#commonality .row:first-child {
+  grid-template-columns: 1fr;
+}
+
+#commonality .row:not(:last-child) {
+  margin: 0 0 3rem;
+}
+
+#commonality .content .list.record-items {
+  grid-template-columns: 1fr 1fr;
+}
+
+#commonality .content .nodes {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 2rem;
+}
+
+#commonality .content .nodes li .corners {
+  opacity: 0.2;
+}
+
+#commonality .content .nodes li .icon {
+  position: relative;
+  width: 100%;
+  height: unset;
+  padding-bottom: 100%;
+}
+
+#commonality .content .nodes.badges li .icon {
+  padding-bottom: 61%;
+}
+
+#commonality .content .nodes.seals li .icon .image {
+  background-size: 80%;
+}
+
+#commonality .content .nodes li .text {
+  margin: 1rem 0 1rem;
+}
+
+#commonality .content .nodes li .text .name {
+  font-style: italic;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#commonality .content .nodes li .text .commonality {
+  font-size: 20px;
+  margin: 0 0 6px;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1440px) {
+
+  #commonality .content .nodes {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  #commonality .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #commonality .module.head {
+    padding: calc(3rem + 40px) 2rem 2rem;
+  }
+
+  #commonality .buff {
+    padding: 2rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  #commonality .content {
+    gap: 2rem;
+  }
+
+  #commonality .row:not(:last-child) {
+    margin: 0 0 1rem;
+  }
+
+  #commonality .content .nodes {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  #commonality .content .list.record-items {
+    grid-template-columns: 1fr;
+  }
+
+  
+}

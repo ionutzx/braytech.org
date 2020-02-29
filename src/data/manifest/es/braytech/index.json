@@ -1,0 +1,71 @@
+{
+  "platform_xbox": {
+    "displayProperties": {
+      "name": "Xbox",
+      "description": "La plataforma a la que pertenece este perfil."
+    },
+    "itemType": 1,
+    "itemTypeDisplayName": "Plataforma"
+  },
+  "platform_playstation": {
+    "displayProperties": {
+      "name": "Playstation",
+      "description": "La plataforma a la que pertenece este perfil."
+    },
+    "itemType": 1,
+    "itemTypeDisplayName": "Plataforma"
+  },
+  "platform_pc": {
+    "displayProperties": {
+      "name": "PC",
+      "description": "La plataforma a la que pertenece este perfil."
+    },
+    "itemType": 1,
+    "itemTypeDisplayName": "Plataforma"
+  },
+  "warmind": {
+    "displayProperties": {
+      "name": "Superintendente",
+      "description": "Tom Chapman, creador e ingeniero de Braytech."
+    },
+    "itemType": 1,
+    "itemTypeDisplayName": "Inteligencia artificial"
+  },
+  "patron-veteran": {
+    "displayProperties": {
+      "name": "Subrutina",
+      "description": "Este Guardián es un faro de luz que, con sus acciones, ha demostrado que valora la valentía y el servicio por encima de todo."
+    },
+    "itemType": 1,
+    "itemTypeDisplayName": "Recompensa de Patreon"
+  },
+  "patron": {
+    "displayProperties": {
+      "name": "Investigador",
+      "description": "Este Guardián, un técnico colega de Clovis Bray, busca mejorar Braytech."
+    },
+    "itemType": 1,
+    "itemTypeDisplayName": "Recompensa de Patreon"
+  },
+  "commonality": {
+    "displayProperties": {
+      "name": "Rareza",
+      "description": "Una representación del número de jugadores que han adquirido o canjeado este triunfo."
+    },
+    "itemType": 1
+  },
+  "score": {
+    "displayProperties": {
+      "name": "Valor en puntos",
+      "description": "El valor en puntos de este triunfo."
+    },
+    "itemType": 1
+  },
+  "character_bound": {
+    "displayProperties": {
+      "name": "Enlazado al personaje",
+      "description": "Estos elementos están vinculados a un personaje. Esto significa que cada personaje los descubre individualmente."
+    },
+    "itemType": 1
+  }
+}
